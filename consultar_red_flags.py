@@ -164,7 +164,7 @@ MODALIDADES_AGRICOLAS_ESTRUTURADAS = ("barter", "cpr")
 
 
 def _so_digitos(identificador: str) -> str:
-    return re.sub(r"\D", "", identificador or "")
+    return re.sub(r"[.\/\-\s]", "", identificador or "").upper()
 
 
 def _norm(texto: str) -> str:
@@ -200,8 +200,8 @@ def _carregar_dividas() -> dict:
             continue
         with open(caminho, newline="", encoding="utf-8") as f:
             for linha in csv.DictReader(f, delimiter=";"):
-                ident = _so_digitos(linha.get("CNPJ_NORMALIZADO") or linha.get("CPF_CNPJ", ""))
-                if not ident:
+                ident = _so_digitos(linha.get("CNPJ_NORMALIZADO", ""))
+                if not re.fullmatch(r"[A-Z0-9]{12}[0-9]{2}", ident):
                     continue  # CPF mascarado de pessoa fisica nao da' pra' juntar com confianca
 
                 dados = {
@@ -277,8 +277,8 @@ def _carregar_auto_infracao() -> dict:
             if _norm(linha.get("SIT_CANCELADO")) == "s":
                 continue  # auto cancelado, nao e' red flag ativa
 
-            ident = _so_digitos(linha.get("CNPJ_NORMALIZADO") or linha.get("CPF_CNPJ_INFRATOR", ""))
-            if not ident:
+            ident = _so_digitos(linha.get("CNPJ_NORMALIZADO", ""))
+            if not re.fullmatch(r"[A-Z0-9]{12}[0-9]{2}", ident):
                 continue
 
             dados = {

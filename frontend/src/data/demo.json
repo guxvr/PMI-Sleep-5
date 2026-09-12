@@ -1,0 +1,5438 @@
+{
+  "schemaVersion": "1.2",
+  "agentReference": {
+    "version": "4",
+    "sourceHash": "52ed0d0391973b03d398f607a0864b42992a96447bd7884efa9a066d194ca857",
+    "scope": "finalidade=producao; sem parametros agronomicos"
+  },
+  "asOf": "2026-09-12",
+  "clients": [
+    {
+      "id": "11222333000181",
+      "name": "Fazenda Santa Aurora",
+      "cnpj": "11.222.333/0001-81",
+      "state": "MT",
+      "city": "",
+      "segment": "Produtor rural",
+      "crop": "Soja",
+      "exposure": 520000,
+      "securedRatio": 0.7,
+      "modality": "prazo",
+      "term": 120,
+      "group": "Independente",
+      "risks": [0, 0, 0, 0, 0],
+      "evidence": [],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": 0,
+      "lastReview": "2026-09-12",
+      "origin": "scenario",
+      "sourceNote": "CNPJ e flags dos casos fixos do agente. Nome, operação, valores, datas e contexto fictícios.",
+      "agentFlagCodes": [],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 1000,
+          "baseScore": 1000,
+          "rating": "A",
+          "rules": [],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 1000,
+          "baseScore": 1000,
+          "rating": "A",
+          "rules": [],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 1000,
+          "baseScore": 1000,
+          "rating": "A",
+          "rules": [],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 1000,
+          "baseScore": 1000,
+          "rating": "A",
+          "rules": [],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "22333444000192",
+      "name": "Agroindustrial Horizonte",
+      "cnpj": "22.333.444/0001-92",
+      "state": "GO",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Milho",
+      "exposure": 820000,
+      "securedRatio": 0.25,
+      "modality": "prazo",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [100, 60, 40, 80, 20],
+      "evidence": [
+        {
+          "id": "pitch-1-0",
+          "title": "Pedido de recuperação judicial",
+          "source": "receita",
+          "file": "consultar_red_flags.py • MOCK_OVERRIDES",
+          "line": 0,
+          "origin": "scenario",
+          "date": "10/09/2026",
+          "status": "Cenário fictício do pitch",
+          "amount": 0,
+          "description": "Ocorrência fixa do roteiro. Datas e vínculo territorial são hipóteses de demonstração, sem consulta oficial.",
+          "raw": {
+            "flag": "RECUPERACAO_JUDICIAL",
+            "fixture": "22333444000192"
+          }
+        },
+        {
+          "id": "pitch-1-1",
+          "title": "Dívida ativa",
+          "source": "pgfn",
+          "file": "consultar_red_flags.py • MOCK_OVERRIDES",
+          "line": 0,
+          "origin": "scenario",
+          "date": "10/09/2026",
+          "status": "Cenário fictício do pitch",
+          "amount": 0,
+          "description": "Ocorrência fixa do roteiro. Datas e vínculo territorial são hipóteses de demonstração, sem consulta oficial.",
+          "raw": {
+            "flag": "DIVIDA_ATIVA_PGFN",
+            "fixture": "22333444000192"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": true,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -260,
+      "lastReview": "2026-09-12",
+      "origin": "scenario",
+      "sourceNote": "CNPJ e flags dos casos fixos do agente. Nome, operação, valores, datas e contexto fictícios.",
+      "agentFlagCodes": ["RECUPERACAO_JUDICIAL", "DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 66,
+          "baseScore": 66,
+          "rating": "D",
+          "rules": [
+            {
+              "label": "RECUPERACAO_JUDICIAL",
+              "points": -590.7
+            },
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -343.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 66,
+          "baseScore": 66,
+          "rating": "D",
+          "rules": [
+            {
+              "label": "RECUPERACAO_JUDICIAL",
+              "points": -590.7
+            },
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -343.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 66,
+          "baseScore": 66,
+          "rating": "D",
+          "rules": [
+            {
+              "label": "RECUPERACAO_JUDICIAL",
+              "points": -590.7
+            },
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -343.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 66,
+          "baseScore": 66,
+          "rating": "D",
+          "rules": [
+            {
+              "label": "RECUPERACAO_JUDICIAL",
+              "points": -590.7
+            },
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -343.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "33444555000103",
+      "name": "Fazenda Campo Verde",
+      "cnpj": "33.444.555/0001-03",
+      "state": "MS",
+      "city": "",
+      "segment": "Produtor rural",
+      "crop": "Algodão",
+      "exposure": 640000,
+      "securedRatio": 0.4,
+      "modality": "prazo",
+      "term": 120,
+      "group": "Independente",
+      "risks": [40, 30, 50, 20, 100],
+      "evidence": [
+        {
+          "id": "pitch-2-0",
+          "title": "Embargo ativo em área vinculada",
+          "source": "ibama",
+          "file": "consultar_red_flags.py • MOCK_OVERRIDES",
+          "line": 0,
+          "origin": "scenario",
+          "date": "10/09/2026",
+          "status": "Cenário fictício do pitch",
+          "amount": 0,
+          "description": "Ocorrência fixa do roteiro. Datas e vínculo territorial são hipóteses de demonstração, sem consulta oficial.",
+          "raw": {
+            "flag": "EMBARGO_AMBIENTAL",
+            "fixture": "33444555000103"
+          }
+        }
+      ],
+      "embargoConfirmed": true,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Execução distribuída",
+      "change": -180,
+      "lastReview": "2026-09-12",
+      "origin": "scenario",
+      "sourceNote": "CNPJ e flags dos casos fixos do agente. Nome, operação, valores, datas e contexto fictícios.",
+      "agentFlagCodes": ["EMBARGO_AMBIENTAL"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 540,
+          "baseScore": 540,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "EMBARGO_AMBIENTAL",
+              "points": -460.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 455,
+          "baseScore": 455,
+          "rating": "D",
+          "rules": [
+            {
+              "label": "EMBARGO_AMBIENTAL",
+              "points": -545.1
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 381,
+          "baseScore": 381,
+          "rating": "D",
+          "rules": [
+            {
+              "label": "EMBARGO_AMBIENTAL",
+              "points": -618.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 381,
+          "baseScore": 381,
+          "rating": "D",
+          "rules": [
+            {
+              "label": "EMBARGO_AMBIENTAL",
+              "points": -618.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "44555666000114",
+      "name": "Cooperativa Vale do Sol",
+      "cnpj": "44.555.666/0001-14",
+      "state": "PR",
+      "city": "",
+      "segment": "Cooperativa",
+      "crop": "Milho",
+      "exposure": 280000,
+      "securedRatio": 0.65,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Independente",
+      "risks": [20, 35, 30, 80, 10],
+      "evidence": [
+        {
+          "id": "pitch-3-0",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "consultar_red_flags.py • MOCK_OVERRIDES",
+          "line": 0,
+          "origin": "scenario",
+          "date": "10/09/2026",
+          "status": "Cenário fictício do pitch",
+          "amount": 0,
+          "description": "Ocorrência fixa do roteiro. Datas e vínculo territorial são hipóteses de demonstração, sem consulta oficial.",
+          "raw": {
+            "flag": "DIVIDA_FGTS",
+            "fixture": "44555666000114"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Alteração societária",
+      "change": -70,
+      "lastReview": "2026-09-12",
+      "origin": "scenario",
+      "sourceNote": "CNPJ e flags dos casos fixos do agente. Nome, operação, valores, datas e contexto fictícios.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "93000000000172",
+      "name": "Alvorada Alimentos S.A.",
+      "cnpj": "93.000.000/0001-72",
+      "state": "DF",
+      "city": "BRASILIA",
+      "segment": "Distribuidor",
+      "crop": "Soja",
+      "exposure": 85000,
+      "securedRatio": 0.2,
+      "modality": "prazo",
+      "term": 60,
+      "group": "Independente",
+      "risks": [7, 12, 15, 12, 0],
+      "evidence": [
+        {
+          "id": "AUTO_INFRACAO-000001",
+          "title": "Auto de infração ambiental",
+          "source": "ibama",
+          "file": "auto_infracao_normalizado.csv",
+          "line": 2,
+          "origin": "csv",
+          "date": "2024-04-08",
+          "status": "Cancelado",
+          "amount": 596610.17,
+          "description": "Suprimir vegetação nativa sem autorização do órgão ambiental competente.",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "AUTO_INFRACAO-000001",
+            "CNPJ_NORMALIZADO": "93000000000172",
+            "VALOR_NUMERICO": "596610.17",
+            "SEQ_AUTO_INFRACAO": "9100000",
+            "DES_STATUS_FORMULARIO": "Cancelado",
+            "DS_SIT_AUTO_AIE": "Impresso",
+            "SIT_CANCELADO": "S",
+            "NUM_AUTO_INFRACAO": "000EP099",
+            "SER_AUTO_INFRACAO": "",
+            "CD_ORIGINAL_AUTO_INFRACAO": "MOCK000001",
+            "TIPO_AUTO": "Advertência",
+            "TIPO_MULTA": "Aberta",
+            "VAL_AUTO_INFRACAO": "596610,17",
+            "FUNDAMENTACAO_MULTA": "Valor calculado conforme gravidade, extensão do dano e capacidade econômica do infrator.",
+            "PATRIMONIO_APURACAO": "",
+            "GRAVIDADE_INFRACAO": "Baixa",
+            "CD_NIVEL_GRAVIDADE": "A",
+            "MOTIVACAO_CONDUTA": "Não intencional",
+            "EFEITO_MEIO_AMBIENTE": "Potencial",
+            "EFEITO_SAUDE_PUBLICA": "Potencial",
+            "PASSIVEL_RECUPERACAO": "S",
+            "UNID_ARRECADACAO": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+            "DES_AUTO_INFRACAO": "Suprimir vegetação nativa sem autorização do órgão ambiental competente.",
+            "DAT_HORA_AUTO_INFRACAO": "2024-04-10 08:00:00",
+            "FORMA_ENTREGA": "Correios",
+            "DAT_CIENCIA_AUTUACAO": "2024-04-12",
+            "DT_FATO_INFRACIONAL": "2024-04-08",
+            "DT_INICIO_ATO_INEQUIVOCO": "2024-04-08",
+            "DT_FIM_ATO_INEQUIVOCO": "2024-04-10",
+            "DS_UNID_CONCILIACAO": "",
+            "COD_MUNICIPIO": "5300108",
+            "MUNICIPIO": "BRASILIA",
+            "UF": "DF",
+            "NUM_PROCESSO": "53001700000202600",
+            "NU_PROCESSO_FORMATADO": "53001.700000/2026-00",
+            "COD_INFRACAO": "409999",
+            "DES_INFRACAO": "Infração da Flora (Não Classificada-Móvel)",
+            "TIPO_INFRACAO": "Flora",
+            "CD_RECEITA_AUTO_INFRACAO": "4304.0",
+            "DES_RECEITA": "Penalidade pecuniária - Flora",
+            "TP_PESSOA_INFRATOR": "PJ",
+            "NUM_PESSOA_INFRATOR": "7300000.0",
+            "NOME_INFRATOR": "ALVORADA ALIMENTOS S.A.",
+            "CPF_CNPJ_INFRATOR": "93.000.000/0001-72",
+            "QT_AREA": "1,00",
+            "INFRACAO_AREA": "Atividade",
+            "DES_OUTROS_TIPO_AREA": "",
+            "CLASSIFICACAO_AREA": "Outras áreas",
+            "DS_FATOR_AJUSTE": "",
+            "NUM_LONGITUDE_AUTO": "-47,90730000000",
+            "NUM_LATITUDE_AUTO": "-15,81040000000",
+            "DS_WKT": "POINT (-47.90730000000 -15.81040000000)",
+            "DES_LOCAL_INFRACAO": "Área fiscalizada no município de BRASILIA",
+            "DS_REFERENCIA_ACAO_FISCALIZATORIA": "Ação fiscalizatória simulada 0001",
+            "UNIDADE_CONSERVACAO": "Área de proteção ambiental simulada",
+            "ID_SICAFI_BIOMAS_ATINGIDOS_INFRACAO": "1",
+            "DS_BIOMAS_ATINGIDOS": "Cerrado",
+            "SEQ_NOTIFICACAO": "820000.0",
+            "SEQ_ACAO_FISCALIZATORIA": "490000.0",
+            "CD_ACAO_FISCALIZATORIA": "00XJXM5",
+            "UNID_CONTROLE": "DIFIS - BRASILIA/DF",
+            "TIPO_ACAO": "Rotina",
+            "OPERACAO": "OPERAÇÃO PROTEÇÃO 01",
+            "DENUNCIA_SISLIV": "",
+            "SEQ_ORDEM_FISCALIZACAO": "8800000",
+            "ORDEM_FISCALIZACAO": "DF600000",
+            "UNID_ORDENADORA": "DIFIS - BRASILIA/DF",
+            "SEQ_SOLICITACAO_RECURSO": "",
+            "SOLICITACAO_RECURSO": "",
+            "OPERACAO_SOL_RECURSO": "",
+            "DT_LANCAMENTO": "2024-04-10 12:00:00",
+            "TP_ULT_ALTERACAO": "Cancelado",
+            "DT_ULT_ALTERACAO": "2024-04-12 15:30:00",
+            "JUSTIFICATIVA_ALTERACAO": "Registro sintético para validação do MVP.",
+            "WKT_GE_AREA_AUTUADA": "",
+            "DT_ULT_ALTER_GEOM": "",
+            "TP_ORIGEM_GE_AREA_AUTUADA": "",
+            "DS_ERRO_GE_AREA_AUTUADA": "",
+            "DS_WKT_GE_AREA_AUTUADA_COM_ERRO": "",
+            "ST_AUTO_MIGRADO_AIE": "S",
+            "DS_ENQUADRAMENTO_ADMINISTRATIVO": "Art. 70 § 1 - Lei 9.605/1998, Art. 3 - Decreto 6.514/2008.",
+            "DS_ENQUADRAMENTO_NAO_ADMINISTRATIVO": "Enquadramento ambiental simulado para Flora.",
+            "DS_ENQUADRAMENTO_COMPLEMENTAR": "",
+            "CD_TERMOS_APREENSAO": "TA000001",
+            "CD_TERMOS_EMBARGOS": "TE000001",
+            "TP_ORIGEM_REGISTRO_AUTO": "AI-e Cadastro de Formulários",
+            "ULTIMA_ATUALIZACAO_RELATORIO": "2026-06-30 01:30:00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -15,
+      "lastReview": "2026-09-12",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": [],
+      "agentAssessments": {
+        "a_vista": {
+          "score": null,
+          "baseScore": null,
+          "rating": "NC",
+          "rules": [],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": null,
+          "baseScore": null,
+          "rating": "NC",
+          "rules": [],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": null,
+          "baseScore": null,
+          "rating": "NC",
+          "rules": [],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": null,
+          "baseScore": null,
+          "rating": "NC",
+          "rules": [],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "93000001000117",
+      "name": "Boa Vista Alimentos Ltda",
+      "cnpj": "93.000.001/0001-17",
+      "state": "AM",
+      "city": "MANAUS",
+      "segment": "Agroindústria",
+      "crop": "Milho",
+      "exposure": 122000,
+      "securedRatio": 0.65,
+      "modality": "barter",
+      "term": 90,
+      "group": "Grupo Cerrado",
+      "risks": [37, 21, 22, 15, 55],
+      "evidence": [
+        {
+          "id": "AUTO_INFRACAO-000002",
+          "title": "Auto de infração ambiental",
+          "source": "ibama",
+          "file": "auto_infracao_normalizado.csv",
+          "line": 3,
+          "origin": "csv",
+          "date": "2025-04-16",
+          "status": "Não cancelado",
+          "amount": 29419.33,
+          "description": "Manter espécimes da fauna silvestre sem licença ou autorização válida.",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "AUTO_INFRACAO-000002",
+            "CNPJ_NORMALIZADO": "93000001000117",
+            "VALOR_NUMERICO": "29419.33",
+            "SEQ_AUTO_INFRACAO": "9100001",
+            "DES_STATUS_FORMULARIO": "Lavrado",
+            "DS_SIT_AUTO_AIE": "Impresso",
+            "SIT_CANCELADO": "N",
+            "NUM_AUTO_INFRACAO": "000EP6D8",
+            "SER_AUTO_INFRACAO": "",
+            "CD_ORIGINAL_AUTO_INFRACAO": "MOCK000002",
+            "TIPO_AUTO": "Multa simples",
+            "TIPO_MULTA": "Fechada",
+            "VAL_AUTO_INFRACAO": "29419,33",
+            "FUNDAMENTACAO_MULTA": "Valor calculado conforme gravidade, extensão do dano e capacidade econômica do infrator.",
+            "PATRIMONIO_APURACAO": "",
+            "GRAVIDADE_INFRACAO": "Média",
+            "CD_NIVEL_GRAVIDADE": "B",
+            "MOTIVACAO_CONDUTA": "Intencional",
+            "EFEITO_MEIO_AMBIENTE": "Fraca",
+            "EFEITO_SAUDE_PUBLICA": "Desprezível",
+            "PASSIVEL_RECUPERACAO": "N",
+            "UNID_ARRECADACAO": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+            "DES_AUTO_INFRACAO": "Manter espécimes da fauna silvestre sem licença ou autorização válida.",
+            "DAT_HORA_AUTO_INFRACAO": "2025-04-19 09:07:11",
+            "FORMA_ENTREGA": "Pessoalmente",
+            "DAT_CIENCIA_AUTUACAO": "2025-04-22",
+            "DT_FATO_INFRACIONAL": "2025-04-16",
+            "DT_INICIO_ATO_INEQUIVOCO": "2025-04-16",
+            "DT_FIM_ATO_INEQUIVOCO": "2025-04-19",
+            "DS_UNID_CONCILIACAO": "",
+            "COD_MUNICIPIO": "1302603",
+            "MUNICIPIO": "MANAUS",
+            "UF": "AM",
+            "NUM_PROCESSO": "13026700001202607",
+            "NU_PROCESSO_FORMATADO": "13026.700001/2026-07",
+            "COD_INFRACAO": "509999",
+            "DES_INFRACAO": "Infração da Fauna (Não Classificada-Móvel)",
+            "TIPO_INFRACAO": "Fauna",
+            "CD_RECEITA_AUTO_INFRACAO": "3304.0",
+            "DES_RECEITA": "Penalidade pecuniária - Fauna",
+            "TP_PESSOA_INFRATOR": "PJ",
+            "NUM_PESSOA_INFRATOR": "7300001.0",
+            "NOME_INFRATOR": "BOA VISTA ALIMENTOS LTDA",
+            "CPF_CNPJ_INFRATOR": "93.000.001/0001-17",
+            "QT_AREA": "",
+            "INFRACAO_AREA": "Desmatamento",
+            "DES_OUTROS_TIPO_AREA": "",
+            "CLASSIFICACAO_AREA": "Amazônia Legal",
+            "DS_FATOR_AJUSTE": "",
+            "NUM_LONGITUDE_AUTO": "-60,04340000000",
+            "NUM_LATITUDE_AUTO": "-3,13250000000",
+            "DS_WKT": "POINT (-60.04340000000 -3.13250000000)",
+            "DES_LOCAL_INFRACAO": "Área fiscalizada no município de MANAUS",
+            "DS_REFERENCIA_ACAO_FISCALIZATORIA": "Ação fiscalizatória simulada 0002",
+            "UNIDADE_CONSERVACAO": "",
+            "ID_SICAFI_BIOMAS_ATINGIDOS_INFRACAO": "2",
+            "DS_BIOMAS_ATINGIDOS": "Amazônia",
+            "SEQ_NOTIFICACAO": "820001.0",
+            "SEQ_ACAO_FISCALIZATORIA": "490001.0",
+            "CD_ACAO_FISCALIZATORIA": "00XK3Q4",
+            "UNID_CONTROLE": "DIFIS - MANAUS/AM",
+            "TIPO_ACAO": "Operação",
+            "OPERACAO": "OPERAÇÃO PROTEÇÃO 02",
+            "DENUNCIA_SISLIV": "",
+            "SEQ_ORDEM_FISCALIZACAO": "8800001",
+            "ORDEM_FISCALIZACAO": "AM600001",
+            "UNID_ORDENADORA": "DIFIS - MANAUS/AM",
+            "SEQ_SOLICITACAO_RECURSO": "",
+            "SOLICITACAO_RECURSO": "",
+            "OPERACAO_SOL_RECURSO": "",
+            "DT_LANCAMENTO": "2025-04-19 12:00:00",
+            "TP_ULT_ALTERACAO": "Alterado",
+            "DT_ULT_ALTERACAO": "2025-04-22 15:30:00",
+            "JUSTIFICATIVA_ALTERACAO": "Registro sintético para validação do MVP.",
+            "WKT_GE_AREA_AUTUADA": "",
+            "DT_ULT_ALTER_GEOM": "",
+            "TP_ORIGEM_GE_AREA_AUTUADA": "",
+            "DS_ERRO_GE_AREA_AUTUADA": "",
+            "DS_WKT_GE_AREA_AUTUADA_COM_ERRO": "",
+            "ST_AUTO_MIGRADO_AIE": "S",
+            "DS_ENQUADRAMENTO_ADMINISTRATIVO": "Art. 70 § 1 - Lei 9.605/1998, Art. 3 - Decreto 6.514/2008.",
+            "DS_ENQUADRAMENTO_NAO_ADMINISTRATIVO": "Enquadramento ambiental simulado para Fauna.",
+            "DS_ENQUADRAMENTO_COMPLEMENTAR": "",
+            "CD_TERMOS_APREENSAO": "",
+            "CD_TERMOS_EMBARGOS": "",
+            "TP_ORIGEM_REGISTRO_AUTO": "AI-e Aplicativo",
+            "ULTIMA_ATUALIZACAO_RELATORIO": "2026-06-30 01:30:00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Execução distribuída",
+      "change": -26,
+      "lastReview": "2026-09-11",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["INFRACAO_AMBIENTAL_SEM_EMBARGO"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "93000002000161",
+      "name": "Caminho Verde Alimentos Ltda",
+      "cnpj": "93.000.002/0001-61",
+      "state": "PA",
+      "city": "BELEM",
+      "segment": "Parceiro B2B",
+      "crop": "Cana-de-açúcar",
+      "exposure": 159000,
+      "securedRatio": 0.4,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [54, 32, 29, 15, 55],
+      "evidence": [
+        {
+          "id": "AUTO_INFRACAO-000003",
+          "title": "Auto de infração ambiental",
+          "source": "ibama",
+          "file": "auto_infracao_normalizado.csv",
+          "line": 4,
+          "origin": "csv",
+          "date": "2024-11-29",
+          "status": "Não cancelado",
+          "amount": 492451.79,
+          "description": "Realizar atividade de pesca em período ou local não autorizado.",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "AUTO_INFRACAO-000003",
+            "CNPJ_NORMALIZADO": "93000002000161",
+            "VALOR_NUMERICO": "492451.79",
+            "SEQ_AUTO_INFRACAO": "9100002",
+            "DES_STATUS_FORMULARIO": "Lavrado",
+            "DS_SIT_AUTO_AIE": "Impresso",
+            "SIT_CANCELADO": "N",
+            "NUM_AUTO_INFRACAO": "000EPCH7",
+            "SER_AUTO_INFRACAO": "",
+            "CD_ORIGINAL_AUTO_INFRACAO": "MOCK000003",
+            "TIPO_AUTO": "Multa simples",
+            "TIPO_MULTA": "Fechada",
+            "VAL_AUTO_INFRACAO": "492451,79",
+            "FUNDAMENTACAO_MULTA": "Valor calculado conforme gravidade, extensão do dano e capacidade econômica do infrator.",
+            "PATRIMONIO_APURACAO": "",
+            "GRAVIDADE_INFRACAO": "Alta",
+            "CD_NIVEL_GRAVIDADE": "C",
+            "MOTIVACAO_CONDUTA": "Intencional",
+            "EFEITO_MEIO_AMBIENTE": "Moderada",
+            "EFEITO_SAUDE_PUBLICA": "Fraca",
+            "PASSIVEL_RECUPERACAO": "N",
+            "UNID_ARRECADACAO": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+            "DES_AUTO_INFRACAO": "Realizar atividade de pesca em período ou local não autorizado.",
+            "DAT_HORA_AUTO_INFRACAO": "2024-12-03 10:14:22",
+            "FORMA_ENTREGA": "Representante",
+            "DAT_CIENCIA_AUTUACAO": "2024-12-07",
+            "DT_FATO_INFRACIONAL": "2024-11-29",
+            "DT_INICIO_ATO_INEQUIVOCO": "2024-11-29",
+            "DT_FIM_ATO_INEQUIVOCO": "2024-12-03",
+            "DS_UNID_CONCILIACAO": "",
+            "COD_MUNICIPIO": "1501402",
+            "MUNICIPIO": "BELEM",
+            "UF": "PA",
+            "NUM_PROCESSO": "15014700002202614",
+            "NU_PROCESSO_FORMATADO": "15014.700002/2026-14",
+            "COD_INFRACAO": "609999",
+            "DES_INFRACAO": "Infração de Pesca (Não Classificada-Móvel)",
+            "TIPO_INFRACAO": "Pesca",
+            "CD_RECEITA_AUTO_INFRACAO": "4404.0",
+            "DES_RECEITA": "Penalidade pecuniária - Pesca",
+            "TP_PESSOA_INFRATOR": "PJ",
+            "NUM_PESSOA_INFRATOR": "7300002.0",
+            "NOME_INFRATOR": "CAMINHO VERDE ALIMENTOS LTDA",
+            "CPF_CNPJ_INFRATOR": "93.000.002/0001-61",
+            "QT_AREA": "",
+            "INFRACAO_AREA": "Não se Aplica",
+            "DES_OUTROS_TIPO_AREA": "",
+            "CLASSIFICACAO_AREA": "Amazônia Legal",
+            "DS_FATOR_AJUSTE": "",
+            "NUM_LONGITUDE_AUTO": "-48,50880000000",
+            "NUM_LATITUDE_AUTO": "-1,46660000000",
+            "DS_WKT": "POINT (-48.50880000000 -1.46660000000)",
+            "DES_LOCAL_INFRACAO": "Área fiscalizada no município de BELEM",
+            "DS_REFERENCIA_ACAO_FISCALIZATORIA": "Ação fiscalizatória simulada 0003",
+            "UNIDADE_CONSERVACAO": "",
+            "ID_SICAFI_BIOMAS_ATINGIDOS_INFRACAO": "3",
+            "DS_BIOMAS_ATINGIDOS": "Amazônia",
+            "SEQ_NOTIFICACAO": "820002.0",
+            "SEQ_ACAO_FISCALIZATORIA": "490002.0",
+            "CD_ACAO_FISCALIZATORIA": "00XK9U3",
+            "UNID_CONTROLE": "DIFIS - BELEM/PA",
+            "TIPO_ACAO": "Operação",
+            "OPERACAO": "OPERAÇÃO PROTEÇÃO 03",
+            "DENUNCIA_SISLIV": "",
+            "SEQ_ORDEM_FISCALIZACAO": "8800002",
+            "ORDEM_FISCALIZACAO": "PA600002",
+            "UNID_ORDENADORA": "DIFIS - BELEM/PA",
+            "SEQ_SOLICITACAO_RECURSO": "",
+            "SOLICITACAO_RECURSO": "",
+            "OPERACAO_SOL_RECURSO": "",
+            "DT_LANCAMENTO": "2024-12-03 12:00:00",
+            "TP_ULT_ALTERACAO": "Alterado",
+            "DT_ULT_ALTERACAO": "2024-12-07 15:30:00",
+            "JUSTIFICATIVA_ALTERACAO": "Registro sintético para validação do MVP.",
+            "WKT_GE_AREA_AUTUADA": "",
+            "DT_ULT_ALTER_GEOM": "",
+            "TP_ORIGEM_GE_AREA_AUTUADA": "",
+            "DS_ERRO_GE_AREA_AUTUADA": "",
+            "DS_WKT_GE_AREA_AUTUADA_COM_ERRO": "",
+            "ST_AUTO_MIGRADO_AIE": "S",
+            "DS_ENQUADRAMENTO_ADMINISTRATIVO": "Art. 70 § 1 - Lei 9.605/1998, Art. 3 - Decreto 6.514/2008.",
+            "DS_ENQUADRAMENTO_NAO_ADMINISTRATIVO": "Enquadramento ambiental simulado para Pesca.",
+            "DS_ENQUADRAMENTO_COMPLEMENTAR": "",
+            "CD_TERMOS_APREENSAO": "",
+            "CD_TERMOS_EMBARGOS": "",
+            "TP_ORIGEM_REGISTRO_AUTO": "AI-e Aplicativo",
+            "ULTIMA_ATUALIZACAO_RELATORIO": "2026-06-30 01:30:00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Alteração societária",
+      "change": -37,
+      "lastReview": "2026-09-10",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["INFRACAO_AMBIENTAL_SEM_EMBARGO"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 540,
+          "baseScore": 540,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -460.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 540,
+          "baseScore": 540,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -460.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 540,
+          "baseScore": 540,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -460.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 540,
+          "baseScore": 540,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -460.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "93000003000106",
+      "name": "Campos Do Sul Alimentos S.A.",
+      "cnpj": "93.000.003/0001-06",
+      "state": "MT",
+      "city": "CUIABA",
+      "segment": "Distribuidor",
+      "crop": "Algodão",
+      "exposure": 196000,
+      "securedRatio": 0.8,
+      "modality": "a_vista",
+      "term": 180,
+      "group": "Independente",
+      "risks": [71, 43, 36, 15, 55],
+      "evidence": [
+        {
+          "id": "AUTO_INFRACAO-000004",
+          "title": "Auto de infração ambiental",
+          "source": "ibama",
+          "file": "auto_infracao_normalizado.csv",
+          "line": 5,
+          "origin": "csv",
+          "date": "2025-09-30",
+          "status": "Não cancelado",
+          "amount": 28108.87,
+          "description": "Deixar de apresentar informação ambiental exigida pela fiscalização.",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "AUTO_INFRACAO-000004",
+            "CNPJ_NORMALIZADO": "93000003000106",
+            "VALOR_NUMERICO": "28108.87",
+            "SEQ_AUTO_INFRACAO": "9100003",
+            "DES_STATUS_FORMULARIO": "Lavrado",
+            "DS_SIT_AUTO_AIE": "Impresso",
+            "SIT_CANCELADO": "N",
+            "NUM_AUTO_INFRACAO": "000EPIL6",
+            "SER_AUTO_INFRACAO": "",
+            "CD_ORIGINAL_AUTO_INFRACAO": "MOCK000004",
+            "TIPO_AUTO": "Multa simples",
+            "TIPO_MULTA": "Aberta",
+            "VAL_AUTO_INFRACAO": "28108,87",
+            "FUNDAMENTACAO_MULTA": "Valor calculado conforme gravidade, extensão do dano e capacidade econômica do infrator.",
+            "PATRIMONIO_APURACAO": "",
+            "GRAVIDADE_INFRACAO": "Baixa",
+            "CD_NIVEL_GRAVIDADE": "D",
+            "MOTIVACAO_CONDUTA": "Intencional",
+            "EFEITO_MEIO_AMBIENTE": "Significativa",
+            "EFEITO_SAUDE_PUBLICA": "Moderada",
+            "PASSIVEL_RECUPERACAO": "S",
+            "UNID_ARRECADACAO": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+            "DES_AUTO_INFRACAO": "Deixar de apresentar informação ambiental exigida pela fiscalização.",
+            "DAT_HORA_AUTO_INFRACAO": "2025-10-05 11:21:33",
+            "FORMA_ENTREGA": "Correios",
+            "DAT_CIENCIA_AUTUACAO": "2025-10-10",
+            "DT_FATO_INFRACIONAL": "2025-09-30",
+            "DT_INICIO_ATO_INEQUIVOCO": "2025-09-30",
+            "DT_FIM_ATO_INEQUIVOCO": "2025-10-05",
+            "DS_UNID_CONCILIACAO": "",
+            "COD_MUNICIPIO": "5103403",
+            "MUNICIPIO": "CUIABA",
+            "UF": "MT",
+            "NUM_PROCESSO": "51034700003202621",
+            "NU_PROCESSO_FORMATADO": "51034.700003/2026-21",
+            "COD_INFRACAO": "809999",
+            "DES_INFRACAO": "Infração contra a Administração Ambiental",
+            "TIPO_INFRACAO": "Administração Ambiental",
+            "CD_RECEITA_AUTO_INFRACAO": "5404.0",
+            "DES_RECEITA": "Penalidade pecuniária - Administração Ambiental",
+            "TP_PESSOA_INFRATOR": "PJ",
+            "NUM_PESSOA_INFRATOR": "7300003.0",
+            "NOME_INFRATOR": "CAMPOS DO SUL ALIMENTOS S.A.",
+            "CPF_CNPJ_INFRATOR": "93.000.003/0001-06",
+            "QT_AREA": "",
+            "INFRACAO_AREA": "Outros",
+            "DES_OUTROS_TIPO_AREA": "Área de uso consolidado",
+            "CLASSIFICACAO_AREA": "Amazônia Legal",
+            "DS_FATOR_AJUSTE": "",
+            "NUM_LONGITUDE_AUTO": "-56,11340000000",
+            "NUM_LATITUDE_AUTO": "-15,60950000000",
+            "DS_WKT": "POINT (-56.11340000000 -15.60950000000)",
+            "DES_LOCAL_INFRACAO": "Área fiscalizada no município de CUIABA",
+            "DS_REFERENCIA_ACAO_FISCALIZATORIA": "Ação fiscalizatória simulada 0004",
+            "UNIDADE_CONSERVACAO": "",
+            "ID_SICAFI_BIOMAS_ATINGIDOS_INFRACAO": "4",
+            "DS_BIOMAS_ATINGIDOS": "Cerrado",
+            "SEQ_NOTIFICACAO": "820003.0",
+            "SEQ_ACAO_FISCALIZATORIA": "490003.0",
+            "CD_ACAO_FISCALIZATORIA": "00XKFY2",
+            "UNID_CONTROLE": "DIFIS - CUIABA/MT",
+            "TIPO_ACAO": "Operação",
+            "OPERACAO": "OPERAÇÃO PROTEÇÃO 04",
+            "DENUNCIA_SISLIV": "",
+            "SEQ_ORDEM_FISCALIZACAO": "8800003",
+            "ORDEM_FISCALIZACAO": "MT600003",
+            "UNID_ORDENADORA": "DIFIS - CUIABA/MT",
+            "SEQ_SOLICITACAO_RECURSO": "",
+            "SOLICITACAO_RECURSO": "",
+            "OPERACAO_SOL_RECURSO": "",
+            "DT_LANCAMENTO": "2025-10-05 12:00:00",
+            "TP_ULT_ALTERACAO": "Alterado",
+            "DT_ULT_ALTERACAO": "2025-10-10 15:30:00",
+            "JUSTIFICATIVA_ALTERACAO": "Registro sintético para validação do MVP.",
+            "WKT_GE_AREA_AUTUADA": "",
+            "DT_ULT_ALTER_GEOM": "",
+            "TP_ORIGEM_GE_AREA_AUTUADA": "",
+            "DS_ERRO_GE_AREA_AUTUADA": "",
+            "DS_WKT_GE_AREA_AUTUADA_COM_ERRO": "",
+            "ST_AUTO_MIGRADO_AIE": "S",
+            "DS_ENQUADRAMENTO_ADMINISTRATIVO": "Art. 70 § 1 - Lei 9.605/1998, Art. 3 - Decreto 6.514/2008.",
+            "DS_ENQUADRAMENTO_NAO_ADMINISTRATIVO": "Enquadramento ambiental simulado para Administração Ambiental.",
+            "DS_ENQUADRAMENTO_COMPLEMENTAR": "",
+            "CD_TERMOS_APREENSAO": "",
+            "CD_TERMOS_EMBARGOS": "",
+            "TP_ORIGEM_REGISTRO_AUTO": "AI-e Aplicativo",
+            "ULTIMA_ATUALIZACAO_RELATORIO": "2026-06-30 01:30:00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -48,
+      "lastReview": "2026-09-09",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["INFRACAO_AMBIENTAL_SEM_EMBARGO"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 798,
+          "baseScore": 798,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -201.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 798,
+          "baseScore": 798,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -201.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 798,
+          "baseScore": 798,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -201.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 798,
+          "baseScore": 798,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -201.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "93000004000150",
+      "name": "Cerrado Alimentos Ltda",
+      "cnpj": "93.000.004/0001-50",
+      "state": "RO",
+      "city": "PORTO VELHO",
+      "segment": "Agroindústria",
+      "crop": "Soja",
+      "exposure": 233000,
+      "securedRatio": 0.35,
+      "modality": "prazo",
+      "term": 60,
+      "group": "Independente",
+      "risks": [13, 54, 43, 15, 55],
+      "evidence": [
+        {
+          "id": "AUTO_INFRACAO-000005",
+          "title": "Auto de infração ambiental",
+          "source": "ibama",
+          "file": "auto_infracao_normalizado.csv",
+          "line": 6,
+          "origin": "csv",
+          "date": "2023-12-06",
+          "status": "Não cancelado",
+          "amount": 255981.63,
+          "description": "Executar atividade potencialmente degradadora em área protegida sem autorização.",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "AUTO_INFRACAO-000005",
+            "CNPJ_NORMALIZADO": "93000004000150",
+            "VALOR_NUMERICO": "255981.63",
+            "SEQ_AUTO_INFRACAO": "9100004",
+            "DES_STATUS_FORMULARIO": "Lavrado",
+            "DS_SIT_AUTO_AIE": "Impresso",
+            "SIT_CANCELADO": "N",
+            "NUM_AUTO_INFRACAO": "000EPOP5",
+            "SER_AUTO_INFRACAO": "",
+            "CD_ORIGINAL_AUTO_INFRACAO": "MOCK000005",
+            "TIPO_AUTO": "Multa simples",
+            "TIPO_MULTA": "Fechada",
+            "VAL_AUTO_INFRACAO": "255981,63",
+            "FUNDAMENTACAO_MULTA": "Valor calculado conforme gravidade, extensão do dano e capacidade econômica do infrator.",
+            "PATRIMONIO_APURACAO": "",
+            "GRAVIDADE_INFRACAO": "Média",
+            "CD_NIVEL_GRAVIDADE": "E",
+            "MOTIVACAO_CONDUTA": "Intencional",
+            "EFEITO_MEIO_AMBIENTE": "Potencial",
+            "EFEITO_SAUDE_PUBLICA": "Potencial",
+            "PASSIVEL_RECUPERACAO": "N",
+            "UNID_ARRECADACAO": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+            "DES_AUTO_INFRACAO": "Executar atividade potencialmente degradadora em área protegida sem autorização.",
+            "DAT_HORA_AUTO_INFRACAO": "2023-12-12 12:28:44",
+            "FORMA_ENTREGA": "Pessoalmente",
+            "DAT_CIENCIA_AUTUACAO": "2023-12-18",
+            "DT_FATO_INFRACIONAL": "2023-12-06",
+            "DT_INICIO_ATO_INEQUIVOCO": "2023-12-06",
+            "DT_FIM_ATO_INEQUIVOCO": "2023-12-12",
+            "DS_UNID_CONCILIACAO": "",
+            "COD_MUNICIPIO": "1100205",
+            "MUNICIPIO": "PORTO VELHO",
+            "UF": "RO",
+            "NUM_PROCESSO": "11002700004202628",
+            "NU_PROCESSO_FORMATADO": "11002.700004/2026-28",
+            "COD_INFRACAO": "709999",
+            "DES_INFRACAO": "Infração em Unidade de Conservação",
+            "TIPO_INFRACAO": "Unidades de Conservação",
+            "CD_RECEITA_AUTO_INFRACAO": "5304.0",
+            "DES_RECEITA": "Penalidade pecuniária - Unidade de Conservação",
+            "TP_PESSOA_INFRATOR": "PJ",
+            "NUM_PESSOA_INFRATOR": "7300004.0",
+            "NOME_INFRATOR": "CERRADO ALIMENTOS LTDA",
+            "CPF_CNPJ_INFRATOR": "93.000.004/0001-50",
+            "QT_AREA": "1,40",
+            "INFRACAO_AREA": "Atividade",
+            "DES_OUTROS_TIPO_AREA": "",
+            "CLASSIFICACAO_AREA": "Amazônia Legal",
+            "DS_FATOR_AJUSTE": "",
+            "NUM_LONGITUDE_AUTO": "-63,91630000000",
+            "NUM_LATITUDE_AUTO": "-8,76620000000",
+            "DS_WKT": "POINT (-63.91630000000 -8.76620000000)",
+            "DES_LOCAL_INFRACAO": "Área fiscalizada no município de PORTO VELHO",
+            "DS_REFERENCIA_ACAO_FISCALIZATORIA": "Ação fiscalizatória simulada 0005",
+            "UNIDADE_CONSERVACAO": "",
+            "ID_SICAFI_BIOMAS_ATINGIDOS_INFRACAO": "5",
+            "DS_BIOMAS_ATINGIDOS": "Amazônia",
+            "SEQ_NOTIFICACAO": "820004.0",
+            "SEQ_ACAO_FISCALIZATORIA": "490004.0",
+            "CD_ACAO_FISCALIZATORIA": "00XKM21",
+            "UNID_CONTROLE": "DIFIS - PORTO VELHO/RO",
+            "TIPO_ACAO": "Operação",
+            "OPERACAO": "OPERAÇÃO PROTEÇÃO 05",
+            "DENUNCIA_SISLIV": "",
+            "SEQ_ORDEM_FISCALIZACAO": "8800004",
+            "ORDEM_FISCALIZACAO": "RO600004",
+            "UNID_ORDENADORA": "DIFIS - PORTO VELHO/RO",
+            "SEQ_SOLICITACAO_RECURSO": "",
+            "SOLICITACAO_RECURSO": "",
+            "OPERACAO_SOL_RECURSO": "",
+            "DT_LANCAMENTO": "2023-12-12 12:00:00",
+            "TP_ULT_ALTERACAO": "Alterado",
+            "DT_ULT_ALTERACAO": "2023-12-18 15:30:00",
+            "JUSTIFICATIVA_ALTERACAO": "Registro sintético para validação do MVP.",
+            "WKT_GE_AREA_AUTUADA": "",
+            "DT_ULT_ALTER_GEOM": "",
+            "TP_ORIGEM_GE_AREA_AUTUADA": "",
+            "DS_ERRO_GE_AREA_AUTUADA": "",
+            "DS_WKT_GE_AREA_AUTUADA_COM_ERRO": "",
+            "ST_AUTO_MIGRADO_AIE": "S",
+            "DS_ENQUADRAMENTO_ADMINISTRATIVO": "Art. 70 § 1 - Lei 9.605/1998, Art. 3 - Decreto 6.514/2008.",
+            "DS_ENQUADRAMENTO_NAO_ADMINISTRATIVO": "Enquadramento ambiental simulado para Unidades de Conservação.",
+            "DS_ENQUADRAMENTO_COMPLEMENTAR": "",
+            "CD_TERMOS_APREENSAO": "",
+            "CD_TERMOS_EMBARGOS": "",
+            "TP_ORIGEM_REGISTRO_AUTO": "AI-e Aplicativo",
+            "ULTIMA_ATUALIZACAO_RELATORIO": "2026-06-30 01:30:00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -59,
+      "lastReview": "2026-09-08",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["INFRACAO_AMBIENTAL_SEM_EMBARGO"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "93000005000103",
+      "name": "Costa Azul Alimentos Ltda",
+      "cnpj": "93.000.005/0001-03",
+      "state": "AC",
+      "city": "RIO BRANCO",
+      "segment": "Parceiro B2B",
+      "crop": "Milho",
+      "exposure": 270000,
+      "securedRatio": 0.2,
+      "modality": "barter",
+      "term": 90,
+      "group": "Grupo Cerrado",
+      "risks": [30, 5, 50, 15, 55],
+      "evidence": [
+        {
+          "id": "AUTO_INFRACAO-000006",
+          "title": "Auto de infração ambiental",
+          "source": "ibama",
+          "file": "auto_infracao_normalizado.csv",
+          "line": 7,
+          "origin": "csv",
+          "date": "2022-07-07",
+          "status": "Não cancelado",
+          "amount": 521935.17,
+          "description": "Suprimir vegetação nativa sem autorização do órgão ambiental competente.",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "AUTO_INFRACAO-000006",
+            "CNPJ_NORMALIZADO": "93000005000103",
+            "VALOR_NUMERICO": "521935.17",
+            "SEQ_AUTO_INFRACAO": "9100005",
+            "DES_STATUS_FORMULARIO": "Lavrado",
+            "DS_SIT_AUTO_AIE": "Impresso",
+            "SIT_CANCELADO": "N",
+            "NUM_AUTO_INFRACAO": "000EPUT4",
+            "SER_AUTO_INFRACAO": "",
+            "CD_ORIGINAL_AUTO_INFRACAO": "MOCK000006",
+            "TIPO_AUTO": "Multa simples",
+            "TIPO_MULTA": "Fechada",
+            "VAL_AUTO_INFRACAO": "521935,17",
+            "FUNDAMENTACAO_MULTA": "Valor calculado conforme gravidade, extensão do dano e capacidade econômica do infrator.",
+            "PATRIMONIO_APURACAO": "",
+            "GRAVIDADE_INFRACAO": "Alta",
+            "CD_NIVEL_GRAVIDADE": "A",
+            "MOTIVACAO_CONDUTA": "Intencional",
+            "EFEITO_MEIO_AMBIENTE": "Fraca",
+            "EFEITO_SAUDE_PUBLICA": "Desprezível",
+            "PASSIVEL_RECUPERACAO": "N",
+            "UNID_ARRECADACAO": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+            "DES_AUTO_INFRACAO": "Suprimir vegetação nativa sem autorização do órgão ambiental competente.",
+            "DAT_HORA_AUTO_INFRACAO": "2022-07-14 13:35:55",
+            "FORMA_ENTREGA": "Representante",
+            "DAT_CIENCIA_AUTUACAO": "2022-07-21",
+            "DT_FATO_INFRACIONAL": "2022-07-07",
+            "DT_INICIO_ATO_INEQUIVOCO": "2022-07-07",
+            "DT_FIM_ATO_INEQUIVOCO": "2022-07-14",
+            "DS_UNID_CONCILIACAO": "",
+            "COD_MUNICIPIO": "1200401",
+            "MUNICIPIO": "RIO BRANCO",
+            "UF": "AC",
+            "NUM_PROCESSO": "12004700005202635",
+            "NU_PROCESSO_FORMATADO": "12004.700005/2026-35",
+            "COD_INFRACAO": "409999",
+            "DES_INFRACAO": "Infração da Flora (Não Classificada-Móvel)",
+            "TIPO_INFRACAO": "Flora",
+            "CD_RECEITA_AUTO_INFRACAO": "4304.0",
+            "DES_RECEITA": "Penalidade pecuniária - Flora",
+            "TP_PESSOA_INFRATOR": "PJ",
+            "NUM_PESSOA_INFRATOR": "7300005.0",
+            "NOME_INFRATOR": "COSTA AZUL ALIMENTOS LTDA",
+            "CPF_CNPJ_INFRATOR": "93.000.005/0001-03",
+            "QT_AREA": "",
+            "INFRACAO_AREA": "Desmatamento",
+            "DES_OUTROS_TIPO_AREA": "",
+            "CLASSIFICACAO_AREA": "Amazônia Legal",
+            "DS_FATOR_AJUSTE": "",
+            "NUM_LONGITUDE_AUTO": "-67,83360000000",
+            "NUM_LATITUDE_AUTO": "-9,97810000000",
+            "DS_WKT": "POINT (-67.83360000000 -9.97810000000)",
+            "DES_LOCAL_INFRACAO": "Área fiscalizada no município de RIO BRANCO",
+            "DS_REFERENCIA_ACAO_FISCALIZATORIA": "Ação fiscalizatória simulada 0006",
+            "UNIDADE_CONSERVACAO": "",
+            "ID_SICAFI_BIOMAS_ATINGIDOS_INFRACAO": "6",
+            "DS_BIOMAS_ATINGIDOS": "Amazônia",
+            "SEQ_NOTIFICACAO": "820005.0",
+            "SEQ_ACAO_FISCALIZATORIA": "490005.0",
+            "CD_ACAO_FISCALIZATORIA": "00XKS60",
+            "UNID_CONTROLE": "DIFIS - RIO BRANCO/AC",
+            "TIPO_ACAO": "Operação",
+            "OPERACAO": "OPERAÇÃO PROTEÇÃO 06",
+            "DENUNCIA_SISLIV": "",
+            "SEQ_ORDEM_FISCALIZACAO": "8800005",
+            "ORDEM_FISCALIZACAO": "AC600005",
+            "UNID_ORDENADORA": "DIFIS - RIO BRANCO/AC",
+            "SEQ_SOLICITACAO_RECURSO": "",
+            "SOLICITACAO_RECURSO": "",
+            "OPERACAO_SOL_RECURSO": "",
+            "DT_LANCAMENTO": "2022-07-14 12:00:00",
+            "TP_ULT_ALTERACAO": "Alterado",
+            "DT_ULT_ALTERACAO": "2022-07-21 15:30:00",
+            "JUSTIFICATIVA_ALTERACAO": "Registro sintético para validação do MVP.",
+            "WKT_GE_AREA_AUTUADA": "",
+            "DT_ULT_ALTER_GEOM": "",
+            "TP_ORIGEM_GE_AREA_AUTUADA": "",
+            "DS_ERRO_GE_AREA_AUTUADA": "",
+            "DS_WKT_GE_AREA_AUTUADA_COM_ERRO": "",
+            "ST_AUTO_MIGRADO_AIE": "S",
+            "DS_ENQUADRAMENTO_ADMINISTRATIVO": "Art. 70 § 1 - Lei 9.605/1998, Art. 3 - Decreto 6.514/2008.",
+            "DS_ENQUADRAMENTO_NAO_ADMINISTRATIVO": "Enquadramento ambiental simulado para Flora.",
+            "DS_ENQUADRAMENTO_COMPLEMENTAR": "",
+            "CD_TERMOS_APREENSAO": "",
+            "CD_TERMOS_EMBARGOS": "",
+            "TP_ORIGEM_REGISTRO_AUTO": "AI-e Aplicativo",
+            "ULTIMA_ATUALIZACAO_RELATORIO": "2026-06-30 01:30:00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -70,
+      "lastReview": "2026-09-07",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["INFRACAO_AMBIENTAL_SEM_EMBARGO"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 540,
+          "baseScore": 540,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -460.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 540,
+          "baseScore": 540,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -460.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 540,
+          "baseScore": 540,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -460.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 540,
+          "baseScore": 540,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -460.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "93000006000140",
+      "name": "Cruzeiro Alimentos S.A.",
+      "cnpj": "93.000.006/0001-40",
+      "state": "RR",
+      "city": "BOA VISTA",
+      "segment": "Distribuidor",
+      "crop": "Cana-de-açúcar",
+      "exposure": 307000,
+      "securedRatio": 0.65,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [47, 16, 57, 15, 55],
+      "evidence": [
+        {
+          "id": "AUTO_INFRACAO-000007",
+          "title": "Auto de infração ambiental",
+          "source": "ibama",
+          "file": "auto_infracao_normalizado.csv",
+          "line": 8,
+          "origin": "csv",
+          "date": "2023-11-10",
+          "status": "Não cancelado",
+          "amount": 439230.9,
+          "description": "Manter espécimes da fauna silvestre sem licença ou autorização válida.",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "AUTO_INFRACAO-000007",
+            "CNPJ_NORMALIZADO": "93000006000140",
+            "VALOR_NUMERICO": "439230.90",
+            "SEQ_AUTO_INFRACAO": "9100006",
+            "DES_STATUS_FORMULARIO": "Lavrado",
+            "DS_SIT_AUTO_AIE": "Impresso",
+            "SIT_CANCELADO": "N",
+            "NUM_AUTO_INFRACAO": "000EQ0X3",
+            "SER_AUTO_INFRACAO": "",
+            "CD_ORIGINAL_AUTO_INFRACAO": "MOCK000007",
+            "TIPO_AUTO": "Multa simples",
+            "TIPO_MULTA": "Aberta",
+            "VAL_AUTO_INFRACAO": "439230,90",
+            "FUNDAMENTACAO_MULTA": "Valor calculado conforme gravidade, extensão do dano e capacidade econômica do infrator.",
+            "PATRIMONIO_APURACAO": "",
+            "GRAVIDADE_INFRACAO": "Baixa",
+            "CD_NIVEL_GRAVIDADE": "B",
+            "MOTIVACAO_CONDUTA": "Não intencional",
+            "EFEITO_MEIO_AMBIENTE": "Moderada",
+            "EFEITO_SAUDE_PUBLICA": "Fraca",
+            "PASSIVEL_RECUPERACAO": "S",
+            "UNID_ARRECADACAO": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+            "DES_AUTO_INFRACAO": "Manter espécimes da fauna silvestre sem licença ou autorização válida.",
+            "DAT_HORA_AUTO_INFRACAO": "2023-11-18 14:42:06",
+            "FORMA_ENTREGA": "Correios",
+            "DAT_CIENCIA_AUTUACAO": "2023-11-26",
+            "DT_FATO_INFRACIONAL": "2023-11-10",
+            "DT_INICIO_ATO_INEQUIVOCO": "2023-11-10",
+            "DT_FIM_ATO_INEQUIVOCO": "2023-11-18",
+            "DS_UNID_CONCILIACAO": "",
+            "COD_MUNICIPIO": "1400100",
+            "MUNICIPIO": "BOA VISTA",
+            "UF": "RR",
+            "NUM_PROCESSO": "14001700006202642",
+            "NU_PROCESSO_FORMATADO": "14001.700006/2026-42",
+            "COD_INFRACAO": "509999",
+            "DES_INFRACAO": "Infração da Fauna (Não Classificada-Móvel)",
+            "TIPO_INFRACAO": "Fauna",
+            "CD_RECEITA_AUTO_INFRACAO": "3304.0",
+            "DES_RECEITA": "Penalidade pecuniária - Fauna",
+            "TP_PESSOA_INFRATOR": "PJ",
+            "NUM_PESSOA_INFRATOR": "7300006.0",
+            "NOME_INFRATOR": "CRUZEIRO ALIMENTOS S.A.",
+            "CPF_CNPJ_INFRATOR": "93.000.006/0001-40",
+            "QT_AREA": "",
+            "INFRACAO_AREA": "Não se Aplica",
+            "DES_OUTROS_TIPO_AREA": "",
+            "CLASSIFICACAO_AREA": "Amazônia Legal",
+            "DS_FATOR_AJUSTE": "",
+            "NUM_LONGITUDE_AUTO": "-60,68150000000",
+            "NUM_LATITUDE_AUTO": "2,82350000000",
+            "DS_WKT": "POINT (-60.68150000000 2.82350000000)",
+            "DES_LOCAL_INFRACAO": "Área fiscalizada no município de BOA VISTA",
+            "DS_REFERENCIA_ACAO_FISCALIZATORIA": "Ação fiscalizatória simulada 0007",
+            "UNIDADE_CONSERVACAO": "",
+            "ID_SICAFI_BIOMAS_ATINGIDOS_INFRACAO": "1",
+            "DS_BIOMAS_ATINGIDOS": "Amazônia",
+            "SEQ_NOTIFICACAO": "820006.0",
+            "SEQ_ACAO_FISCALIZATORIA": "490006.0",
+            "CD_ACAO_FISCALIZATORIA": "00XKY9Z",
+            "UNID_CONTROLE": "DIFIS - BOA VISTA/RR",
+            "TIPO_ACAO": "Operação",
+            "OPERACAO": "OPERAÇÃO PROTEÇÃO 07",
+            "DENUNCIA_SISLIV": "",
+            "SEQ_ORDEM_FISCALIZACAO": "8800006",
+            "ORDEM_FISCALIZACAO": "RR600006",
+            "UNID_ORDENADORA": "DIFIS - BOA VISTA/RR",
+            "SEQ_SOLICITACAO_RECURSO": "",
+            "SOLICITACAO_RECURSO": "",
+            "OPERACAO_SOL_RECURSO": "",
+            "DT_LANCAMENTO": "2023-11-18 12:00:00",
+            "TP_ULT_ALTERACAO": "Alterado",
+            "DT_ULT_ALTERACAO": "2023-11-26 15:30:00",
+            "JUSTIFICATIVA_ALTERACAO": "Registro sintético para validação do MVP.",
+            "WKT_GE_AREA_AUTUADA": "",
+            "DT_ULT_ALTER_GEOM": "",
+            "TP_ORIGEM_GE_AREA_AUTUADA": "",
+            "DS_ERRO_GE_AREA_AUTUADA": "",
+            "DS_WKT_GE_AREA_AUTUADA_COM_ERRO": "",
+            "ST_AUTO_MIGRADO_AIE": "S",
+            "DS_ENQUADRAMENTO_ADMINISTRATIVO": "Art. 70 § 1 - Lei 9.605/1998, Art. 3 - Decreto 6.514/2008.",
+            "DS_ENQUADRAMENTO_NAO_ADMINISTRATIVO": "Enquadramento ambiental simulado para Fauna.",
+            "DS_ENQUADRAMENTO_COMPLEMENTAR": "",
+            "CD_TERMOS_APREENSAO": "",
+            "CD_TERMOS_EMBARGOS": "",
+            "TP_ORIGEM_REGISTRO_AUTO": "AI-e Aplicativo",
+            "ULTIMA_ATUALIZACAO_RELATORIO": "2026-06-30 01:30:00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -81,
+      "lastReview": "2026-09-06",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["INFRACAO_AMBIENTAL_SEM_EMBARGO"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 883,
+          "baseScore": 883,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -117.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 883,
+          "baseScore": 883,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -117.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 883,
+          "baseScore": 883,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -117.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 883,
+          "baseScore": 883,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -117.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "93000007000194",
+      "name": "Estrela Do Norte Alimentos Ltda",
+      "cnpj": "93.000.007/0001-94",
+      "state": "AP",
+      "city": "MACAPA",
+      "segment": "Agroindústria",
+      "crop": "Algodão",
+      "exposure": 344000,
+      "securedRatio": 0.4,
+      "modality": "a_vista",
+      "term": 180,
+      "group": "Independente",
+      "risks": [7, 12, 15, 12, 0],
+      "evidence": [
+        {
+          "id": "AUTO_INFRACAO-000008",
+          "title": "Auto de infração ambiental",
+          "source": "ibama",
+          "file": "auto_infracao_normalizado.csv",
+          "line": 9,
+          "origin": "csv",
+          "date": "2024-01-26",
+          "status": "Não cancelado",
+          "amount": 393579.19,
+          "description": "Realizar atividade de pesca em período ou local não autorizado.",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "AUTO_INFRACAO-000008",
+            "CNPJ_NORMALIZADO": "93000007000194",
+            "VALOR_NUMERICO": "393579.19",
+            "SEQ_AUTO_INFRACAO": "9100007",
+            "DES_STATUS_FORMULARIO": "Lavrado",
+            "DS_SIT_AUTO_AIE": "Impresso",
+            "SIT_CANCELADO": "N",
+            "NUM_AUTO_INFRACAO": "000EQ712",
+            "SER_AUTO_INFRACAO": "",
+            "CD_ORIGINAL_AUTO_INFRACAO": "MOCK000008",
+            "TIPO_AUTO": "Multa simples",
+            "TIPO_MULTA": "Fechada",
+            "VAL_AUTO_INFRACAO": "393579,19",
+            "FUNDAMENTACAO_MULTA": "Valor calculado conforme gravidade, extensão do dano e capacidade econômica do infrator.",
+            "PATRIMONIO_APURACAO": "",
+            "GRAVIDADE_INFRACAO": "Média",
+            "CD_NIVEL_GRAVIDADE": "C",
+            "MOTIVACAO_CONDUTA": "Intencional",
+            "EFEITO_MEIO_AMBIENTE": "Significativa",
+            "EFEITO_SAUDE_PUBLICA": "Moderada",
+            "PASSIVEL_RECUPERACAO": "N",
+            "UNID_ARRECADACAO": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+            "DES_AUTO_INFRACAO": "Realizar atividade de pesca em período ou local não autorizado.",
+            "DAT_HORA_AUTO_INFRACAO": "2024-02-04 15:49:17",
+            "FORMA_ENTREGA": "Pessoalmente",
+            "DAT_CIENCIA_AUTUACAO": "2024-02-13",
+            "DT_FATO_INFRACIONAL": "2024-01-26",
+            "DT_INICIO_ATO_INEQUIVOCO": "2024-01-26",
+            "DT_FIM_ATO_INEQUIVOCO": "2024-02-04",
+            "DS_UNID_CONCILIACAO": "",
+            "COD_MUNICIPIO": "1600303",
+            "MUNICIPIO": "MACAPA",
+            "UF": "AP",
+            "NUM_PROCESSO": "16003700007202649",
+            "NU_PROCESSO_FORMATADO": "16003.700007/2026-49",
+            "COD_INFRACAO": "609999",
+            "DES_INFRACAO": "Infração de Pesca (Não Classificada-Móvel)",
+            "TIPO_INFRACAO": "Pesca",
+            "CD_RECEITA_AUTO_INFRACAO": "4404.0",
+            "DES_RECEITA": "Penalidade pecuniária - Pesca",
+            "TP_PESSOA_INFRATOR": "PJ",
+            "NUM_PESSOA_INFRATOR": "7300007.0",
+            "NOME_INFRATOR": "ESTRELA DO NORTE ALIMENTOS LTDA",
+            "CPF_CNPJ_INFRATOR": "93.000.007/0001-94",
+            "QT_AREA": "",
+            "INFRACAO_AREA": "Outros",
+            "DES_OUTROS_TIPO_AREA": "Área de uso consolidado",
+            "CLASSIFICACAO_AREA": "Amazônia Legal",
+            "DS_FATOR_AJUSTE": "",
+            "NUM_LONGITUDE_AUTO": "-51,06950000000",
+            "NUM_LATITUDE_AUTO": "0,03760000000",
+            "DS_WKT": "POINT (-51.06950000000 0.03760000000)",
+            "DES_LOCAL_INFRACAO": "Área fiscalizada no município de MACAPA",
+            "DS_REFERENCIA_ACAO_FISCALIZATORIA": "Ação fiscalizatória simulada 0008",
+            "UNIDADE_CONSERVACAO": "Área de proteção ambiental simulada",
+            "ID_SICAFI_BIOMAS_ATINGIDOS_INFRACAO": "2",
+            "DS_BIOMAS_ATINGIDOS": "Amazônia",
+            "SEQ_NOTIFICACAO": "820007.0",
+            "SEQ_ACAO_FISCALIZATORIA": "490007.0",
+            "CD_ACAO_FISCALIZATORIA": "00XL4DY",
+            "UNID_CONTROLE": "DIFIS - MACAPA/AP",
+            "TIPO_ACAO": "Operação",
+            "OPERACAO": "OPERAÇÃO PROTEÇÃO 08",
+            "DENUNCIA_SISLIV": "",
+            "SEQ_ORDEM_FISCALIZACAO": "8800007",
+            "ORDEM_FISCALIZACAO": "AP600007",
+            "UNID_ORDENADORA": "DIFIS - MACAPA/AP",
+            "SEQ_SOLICITACAO_RECURSO": "",
+            "SOLICITACAO_RECURSO": "",
+            "OPERACAO_SOL_RECURSO": "",
+            "DT_LANCAMENTO": "2024-02-04 12:00:00",
+            "TP_ULT_ALTERACAO": "Alterado",
+            "DT_ULT_ALTERACAO": "2024-02-13 15:30:00",
+            "JUSTIFICATIVA_ALTERACAO": "Registro sintético para validação do MVP.",
+            "WKT_GE_AREA_AUTUADA": "",
+            "DT_ULT_ALTER_GEOM": "",
+            "TP_ORIGEM_GE_AREA_AUTUADA": "",
+            "DS_ERRO_GE_AREA_AUTUADA": "",
+            "DS_WKT_GE_AREA_AUTUADA_COM_ERRO": "",
+            "ST_AUTO_MIGRADO_AIE": "S",
+            "DS_ENQUADRAMENTO_ADMINISTRATIVO": "Art. 70 § 1 - Lei 9.605/1998, Art. 3 - Decreto 6.514/2008.",
+            "DS_ENQUADRAMENTO_NAO_ADMINISTRATIVO": "Enquadramento ambiental simulado para Pesca.",
+            "DS_ENQUADRAMENTO_COMPLEMENTAR": "",
+            "CD_TERMOS_APREENSAO": "",
+            "CD_TERMOS_EMBARGOS": "",
+            "TP_ORIGEM_REGISTRO_AUTO": "AI-e Aplicativo",
+            "ULTIMA_ATUALIZACAO_RELATORIO": "2026-06-30 01:30:00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Execução distribuída",
+      "change": -92,
+      "lastReview": "2026-09-05",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["INFRACAO_AMBIENTAL_SEM_EMBARGO"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 640,
+          "baseScore": 640,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -360.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "93000008000139",
+      "name": "Horizonte Alimentos Ltda",
+      "cnpj": "93.000.008/0001-39",
+      "state": "TO",
+      "city": "PALMAS",
+      "segment": "Parceiro B2B",
+      "crop": "Soja",
+      "exposure": 381000,
+      "securedRatio": 0.8,
+      "modality": "prazo",
+      "term": 60,
+      "group": "Independente",
+      "risks": [6, 38, 1, 15, 55],
+      "evidence": [
+        {
+          "id": "AUTO_INFRACAO-000009",
+          "title": "Auto de infração ambiental",
+          "source": "ibama",
+          "file": "auto_infracao_normalizado.csv",
+          "line": 10,
+          "origin": "csv",
+          "date": "2024-06-20",
+          "status": "Não cancelado",
+          "amount": 660207.62,
+          "description": "Deixar de apresentar informação ambiental exigida pela fiscalização.",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "AUTO_INFRACAO-000009",
+            "CNPJ_NORMALIZADO": "93000008000139",
+            "VALOR_NUMERICO": "660207.62",
+            "SEQ_AUTO_INFRACAO": "9100008",
+            "DES_STATUS_FORMULARIO": "Lavrado",
+            "DS_SIT_AUTO_AIE": "Impresso",
+            "SIT_CANCELADO": "N",
+            "NUM_AUTO_INFRACAO": "000EQD51",
+            "SER_AUTO_INFRACAO": "",
+            "CD_ORIGINAL_AUTO_INFRACAO": "MOCK000009",
+            "TIPO_AUTO": "Multa simples",
+            "TIPO_MULTA": "Fechada",
+            "VAL_AUTO_INFRACAO": "660207,62",
+            "FUNDAMENTACAO_MULTA": "Valor calculado conforme gravidade, extensão do dano e capacidade econômica do infrator.",
+            "PATRIMONIO_APURACAO": "",
+            "GRAVIDADE_INFRACAO": "Alta",
+            "CD_NIVEL_GRAVIDADE": "D",
+            "MOTIVACAO_CONDUTA": "Intencional",
+            "EFEITO_MEIO_AMBIENTE": "Potencial",
+            "EFEITO_SAUDE_PUBLICA": "Potencial",
+            "PASSIVEL_RECUPERACAO": "N",
+            "UNID_ARRECADACAO": "Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis",
+            "DES_AUTO_INFRACAO": "Deixar de apresentar informação ambiental exigida pela fiscalização.",
+            "DAT_HORA_AUTO_INFRACAO": "2024-06-30 16:56:28",
+            "FORMA_ENTREGA": "Representante",
+            "DAT_CIENCIA_AUTUACAO": "2024-07-10",
+            "DT_FATO_INFRACIONAL": "2024-06-20",
+            "DT_INICIO_ATO_INEQUIVOCO": "2024-06-20",
+            "DT_FIM_ATO_INEQUIVOCO": "2024-06-30",
+            "DS_UNID_CONCILIACAO": "",
+            "COD_MUNICIPIO": "1721000",
+            "MUNICIPIO": "PALMAS",
+            "UF": "TO",
+            "NUM_PROCESSO": "17210700008202656",
+            "NU_PROCESSO_FORMATADO": "17210.700008/2026-56",
+            "COD_INFRACAO": "809999",
+            "DES_INFRACAO": "Infração contra a Administração Ambiental",
+            "TIPO_INFRACAO": "Administração Ambiental",
+            "CD_RECEITA_AUTO_INFRACAO": "5404.0",
+            "DES_RECEITA": "Penalidade pecuniária - Administração Ambiental",
+            "TP_PESSOA_INFRATOR": "PJ",
+            "NUM_PESSOA_INFRATOR": "7300008.0",
+            "NOME_INFRATOR": "HORIZONTE ALIMENTOS LTDA",
+            "CPF_CNPJ_INFRATOR": "93.000.008/0001-39",
+            "QT_AREA": "1,80",
+            "INFRACAO_AREA": "Atividade",
+            "DES_OUTROS_TIPO_AREA": "",
+            "CLASSIFICACAO_AREA": "Outras áreas",
+            "DS_FATOR_AJUSTE": "",
+            "NUM_LONGITUDE_AUTO": "-48,33360000000",
+            "NUM_LATITUDE_AUTO": "-10,17860000000",
+            "DS_WKT": "POINT (-48.33360000000 -10.17860000000)",
+            "DES_LOCAL_INFRACAO": "Área fiscalizada no município de PALMAS",
+            "DS_REFERENCIA_ACAO_FISCALIZATORIA": "Ação fiscalizatória simulada 0009",
+            "UNIDADE_CONSERVACAO": "",
+            "ID_SICAFI_BIOMAS_ATINGIDOS_INFRACAO": "3",
+            "DS_BIOMAS_ATINGIDOS": "Cerrado",
+            "SEQ_NOTIFICACAO": "820008.0",
+            "SEQ_ACAO_FISCALIZATORIA": "490008.0",
+            "CD_ACAO_FISCALIZATORIA": "00XLAHX",
+            "UNID_CONTROLE": "DIFIS - PALMAS/TO",
+            "TIPO_ACAO": "Operação",
+            "OPERACAO": "OPERAÇÃO PROTEÇÃO 09",
+            "DENUNCIA_SISLIV": "",
+            "SEQ_ORDEM_FISCALIZACAO": "8800008",
+            "ORDEM_FISCALIZACAO": "TO600008",
+            "UNID_ORDENADORA": "DIFIS - PALMAS/TO",
+            "SEQ_SOLICITACAO_RECURSO": "",
+            "SOLICITACAO_RECURSO": "",
+            "OPERACAO_SOL_RECURSO": "",
+            "DT_LANCAMENTO": "2024-06-30 12:00:00",
+            "TP_ULT_ALTERACAO": "Alterado",
+            "DT_ULT_ALTERACAO": "2024-07-10 15:30:00",
+            "JUSTIFICATIVA_ALTERACAO": "Registro sintético para validação do MVP.",
+            "WKT_GE_AREA_AUTUADA": "",
+            "DT_ULT_ALTER_GEOM": "",
+            "TP_ORIGEM_GE_AREA_AUTUADA": "",
+            "DS_ERRO_GE_AREA_AUTUADA": "",
+            "DS_WKT_GE_AREA_AUTUADA_COM_ERRO": "",
+            "ST_AUTO_MIGRADO_AIE": "S",
+            "DS_ENQUADRAMENTO_ADMINISTRATIVO": "Art. 70 § 1 - Lei 9.605/1998, Art. 3 - Decreto 6.514/2008.",
+            "DS_ENQUADRAMENTO_NAO_ADMINISTRATIVO": "Enquadramento ambiental simulado para Administração Ambiental.",
+            "DS_ENQUADRAMENTO_COMPLEMENTAR": "",
+            "CD_TERMOS_APREENSAO": "",
+            "CD_TERMOS_EMBARGOS": "",
+            "TP_ORIGEM_REGISTRO_AUTO": "AI-e Aplicativo",
+            "ULTIMA_ATUALIZACAO_RELATORIO": "2026-06-30 01:30:00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -103,
+      "lastReview": "2026-09-04",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["INFRACAO_AMBIENTAL_SEM_EMBARGO"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 598,
+          "baseScore": 598,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -401.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 598,
+          "baseScore": 598,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -401.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 598,
+          "baseScore": 598,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -401.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 598,
+          "baseScore": 598,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "INFRACAO_AMBIENTAL_SEM_EMBARGO",
+              "points": -401.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "96000001000105",
+      "name": "Boa Vista Obras E Servicos Ltda",
+      "cnpj": "96.000.001/0001-05",
+      "state": "PA",
+      "city": "",
+      "segment": "Distribuidor",
+      "crop": "Milho",
+      "exposure": 418000,
+      "securedRatio": 0.35,
+      "modality": "barter",
+      "term": 90,
+      "group": "Grupo Cerrado",
+      "risks": [23, 49, 8, 60, 0],
+      "evidence": [
+        {
+          "id": "NAO_PREVIDENCIARIO-000002",
+          "title": "Inscrição em dívida ativa",
+          "source": "pgfn",
+          "file": "nao_previdenciario_normalizado.csv",
+          "line": 3,
+          "origin": "csv",
+          "date": "07/11/2004",
+          "status": "ATIVA A SER COBRADA",
+          "amount": 185568.91,
+          "description": "Receita da dívida ativa - COFINS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "NAO_PREVIDENCIARIO-000002",
+            "CNPJ_NORMALIZADO": "96000001000105",
+            "VALOR_NUMERICO": "185568.91",
+            "CPF_CNPJ": "96.000.001/0001-05",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "PRINCIPAL",
+            "NOME_DEVEDOR": "BOA VISTA OBRAS E SERVICOS LTDA",
+            "UF_DEVEDOR": "PA",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "8000000104730",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "ATIVA A SER COBRADA",
+            "RECEITA_PRINCIPAL": "Receita da dívida ativa - COFINS",
+            "DATA_INSCRICAO": "07/11/2004",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "185568.91"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Alteração societária",
+      "change": -114,
+      "lastReview": "2026-09-03",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "96000002000150",
+      "name": "Caminho Verde Obras E Servicos Ltda",
+      "cnpj": "96.000.002/0001-50",
+      "state": "TO",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Cana-de-açúcar",
+      "exposure": 455000,
+      "securedRatio": 0.2,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [40, 0, 15, 60, 0],
+      "evidence": [
+        {
+          "id": "NAO_PREVIDENCIARIO-000003",
+          "title": "Inscrição em dívida ativa",
+          "source": "pgfn",
+          "file": "nao_previdenciario_normalizado.csv",
+          "line": 4,
+          "origin": "csv",
+          "date": "13/02/2024",
+          "status": "ATIVA A SER COBRADA",
+          "amount": 491922.05,
+          "description": "Receita da dívida ativa - IRPJ",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "NAO_PREVIDENCIARIO-000003",
+            "CNPJ_NORMALIZADO": "96000002000150",
+            "VALOR_NUMERICO": "491922.05",
+            "CPF_CNPJ": "96.000.002/0001-50",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "PRINCIPAL",
+            "NOME_DEVEDOR": "CAMINHO VERDE OBRAS E SERVICOS LTDA",
+            "UF_DEVEDOR": "TO",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "8000000209459",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "ATIVA A SER COBRADA",
+            "RECEITA_PRINCIPAL": "Receita da dívida ativa - IRPJ",
+            "DATA_INSCRICAO": "13/02/2024",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "491922.05"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -125,
+      "lastReview": "2026-09-12",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "96000003000102",
+      "name": "Campos Do Sul Obras E Servicos S.A.",
+      "cnpj": "96.000.003/0001-02",
+      "state": "MG",
+      "city": "",
+      "segment": "Parceiro B2B",
+      "crop": "Algodão",
+      "exposure": 492000,
+      "securedRatio": 0.65,
+      "modality": "a_vista",
+      "term": 180,
+      "group": "Independente",
+      "risks": [57, 11, 22, 60, 0],
+      "evidence": [
+        {
+          "id": "NAO_PREVIDENCIARIO-000004",
+          "title": "Inscrição em dívida ativa",
+          "source": "pgfn",
+          "file": "nao_previdenciario_normalizado.csv",
+          "line": 5,
+          "origin": "csv",
+          "date": "07/09/2014",
+          "status": "ATIVA COM AJUIZAMENTO A SER PROSSEGUIDO",
+          "amount": 24193.89,
+          "description": "Receita da dívida ativa - CSLL",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "NAO_PREVIDENCIARIO-000004",
+            "CNPJ_NORMALIZADO": "96000003000102",
+            "VALOR_NUMERICO": "24193.89",
+            "CPF_CNPJ": "96.000.003/0001-02",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "PRINCIPAL",
+            "NOME_DEVEDOR": "CAMPOS DO SUL OBRAS E SERVICOS S.A.",
+            "UF_DEVEDOR": "MG",
+            "UNIDADE_RESPONSAVEL": "6ª REGIÃO",
+            "NUMERO_INSCRICAO": "8000000314188",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "ATIVA COM AJUIZAMENTO A SER PROSSEGUIDO",
+            "RECEITA_PRINCIPAL": "Receita da dívida ativa - CSLL",
+            "DATA_INSCRICAO": "07/09/2014",
+            "INDICADOR_AJUIZADO": "SIM",
+            "VALOR_CONSOLIDADO": "24193.89"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -136,
+      "lastReview": "2026-09-11",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 657,
+          "baseScore": 657,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -343.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 657,
+          "baseScore": 657,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -343.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 657,
+          "baseScore": 657,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -343.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 657,
+          "baseScore": 657,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -343.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "96000004000149",
+      "name": "Cerrado Obras E Servicos Ltda",
+      "cnpj": "96.000.004/0001-49",
+      "state": "SE",
+      "city": "",
+      "segment": "Distribuidor",
+      "crop": "Soja",
+      "exposure": 529000,
+      "securedRatio": 0.4,
+      "modality": "prazo",
+      "term": 60,
+      "group": "Independente",
+      "risks": [74, 22, 29, 60, 0],
+      "evidence": [
+        {
+          "id": "NAO_PREVIDENCIARIO-000005",
+          "title": "Inscrição em dívida ativa",
+          "source": "pgfn",
+          "file": "nao_previdenciario_normalizado.csv",
+          "line": 6,
+          "origin": "csv",
+          "date": "06/03/2000",
+          "status": "ATIVA A SER COBRADA",
+          "amount": 1422666.45,
+          "description": "Receita da dívida ativa - IRPF",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "NAO_PREVIDENCIARIO-000005",
+            "CNPJ_NORMALIZADO": "96000004000149",
+            "VALOR_NUMERICO": "1422666.45",
+            "CPF_CNPJ": "96.000.004/0001-49",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "PRINCIPAL",
+            "NOME_DEVEDOR": "CERRADO OBRAS E SERVICOS LTDA",
+            "UF_DEVEDOR": "SE",
+            "UNIDADE_RESPONSAVEL": "5ª REGIÃO",
+            "NUMERO_INSCRICAO": "8000000418917",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "ATIVA A SER COBRADA",
+            "RECEITA_PRINCIPAL": "Receita da dívida ativa - IRPF",
+            "DATA_INSCRICAO": "06/03/2000",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "1422666.45"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -147,
+      "lastReview": "2026-09-10",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "96000005000193",
+      "name": "Costa Azul Obras E Servicos Ltda",
+      "cnpj": "96.000.005/0001-93",
+      "state": "MS",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Milho",
+      "exposure": 566000,
+      "securedRatio": 0.8,
+      "modality": "barter",
+      "term": 90,
+      "group": "Grupo Cerrado",
+      "risks": [16, 33, 36, 60, 0],
+      "evidence": [
+        {
+          "id": "NAO_PREVIDENCIARIO-000006",
+          "title": "Inscrição em dívida ativa",
+          "source": "pgfn",
+          "file": "nao_previdenciario_normalizado.csv",
+          "line": 7,
+          "origin": "csv",
+          "date": "01/12/2001",
+          "status": "ATIVA AJUIZADA NEGOCIADA NO SISPAR",
+          "amount": 537947.72,
+          "description": "Receita da dívida ativa - IRRF",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "NAO_PREVIDENCIARIO-000006",
+            "CNPJ_NORMALIZADO": "96000005000193",
+            "VALOR_NUMERICO": "537947.72",
+            "CPF_CNPJ": "96.000.005/0001-93",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "PRINCIPAL",
+            "NOME_DEVEDOR": "COSTA AZUL OBRAS E SERVICOS LTDA",
+            "UF_DEVEDOR": "MS",
+            "UNIDADE_RESPONSAVEL": "MATO GROSSO DO SUL",
+            "NUMERO_INSCRICAO": "8000000523646",
+            "TIPO_SITUACAO_INSCRICAO": "Benefício Fiscal",
+            "SITUACAO_INSCRICAO": "ATIVA AJUIZADA NEGOCIADA NO SISPAR",
+            "RECEITA_PRINCIPAL": "Receita da dívida ativa - IRRF",
+            "DATA_INSCRICAO": "01/12/2001",
+            "INDICADOR_AJUIZADO": "SIM",
+            "VALOR_CONSOLIDADO": "537947.72"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Execução distribuída",
+      "change": -23,
+      "lastReview": "2026-09-09",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "96000006000138",
+      "name": "Cruzeiro Obras E Servicos S.A.",
+      "cnpj": "96.000.006/0001-38",
+      "state": "SP",
+      "city": "",
+      "segment": "Parceiro B2B",
+      "crop": "Cana-de-açúcar",
+      "exposure": 603000,
+      "securedRatio": 0.35,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [7, 12, 15, 12, 0],
+      "evidence": [
+        {
+          "id": "NAO_PREVIDENCIARIO-000007",
+          "title": "Inscrição em dívida ativa",
+          "source": "pgfn",
+          "file": "nao_previdenciario_normalizado.csv",
+          "line": 8,
+          "origin": "csv",
+          "date": "22/01/2002",
+          "status": "ATIVA A SER COBRADA",
+          "amount": 2202851.01,
+          "description": "Receita da dívida ativa - Multa - CLT",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "NAO_PREVIDENCIARIO-000007",
+            "CNPJ_NORMALIZADO": "96000006000138",
+            "VALOR_NUMERICO": "2202851.01",
+            "CPF_CNPJ": "96.000.006/0001-38",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "PRINCIPAL",
+            "NOME_DEVEDOR": "CRUZEIRO OBRAS E SERVICOS S.A.",
+            "UF_DEVEDOR": "SP",
+            "UNIDADE_RESPONSAVEL": "3ª REGIÃO",
+            "NUMERO_INSCRICAO": "8000000628375",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "ATIVA A SER COBRADA",
+            "RECEITA_PRINCIPAL": "Receita da dívida ativa - Multa - CLT",
+            "DATA_INSCRICAO": "22/01/2002",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "2202851.01"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -34,
+      "lastReview": "2026-09-08",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "96000008000127",
+      "name": "Horizonte Obras E Servicos Ltda",
+      "cnpj": "96.000.008/0001-27",
+      "state": "SC",
+      "city": "",
+      "segment": "Distribuidor",
+      "crop": "Algodão",
+      "exposure": 640000,
+      "securedRatio": 0.2,
+      "modality": "a_vista",
+      "term": 180,
+      "group": "Independente",
+      "risks": [50, 55, 50, 60, 0],
+      "evidence": [
+        {
+          "id": "NAO_PREVIDENCIARIO-000009",
+          "title": "Inscrição em dívida ativa",
+          "source": "pgfn",
+          "file": "nao_previdenciario_normalizado.csv",
+          "line": 10,
+          "origin": "csv",
+          "date": "25/11/1998",
+          "status": "ATIVA A SER COBRADA",
+          "amount": 1292038.44,
+          "description": "Receita da dívida ativa - Contribuição açúcar e álcool",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "NAO_PREVIDENCIARIO-000009",
+            "CNPJ_NORMALIZADO": "96000008000127",
+            "VALOR_NUMERICO": "1292038.44",
+            "CPF_CNPJ": "96.000.008/0001-27",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "PRINCIPAL",
+            "NOME_DEVEDOR": "HORIZONTE OBRAS E SERVICOS LTDA",
+            "UF_DEVEDOR": "SC",
+            "UNIDADE_RESPONSAVEL": "4ª REGIÃO",
+            "NUMERO_INSCRICAO": "8000000837833",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "ATIVA A SER COBRADA",
+            "RECEITA_PRINCIPAL": "Receita da dívida ativa - Contribuição açúcar e álcool",
+            "DATA_INSCRICAO": "25/11/1998",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "1292038.44"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -45,
+      "lastReview": "2026-09-07",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "96000009000171",
+      "name": "Integra Obras E Servicos S.A.",
+      "cnpj": "96.000.009/0001-71",
+      "state": "MA",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Soja",
+      "exposure": 677000,
+      "securedRatio": 0.65,
+      "modality": "prazo",
+      "term": 60,
+      "group": "Independente",
+      "risks": [67, 6, 57, 60, 0],
+      "evidence": [
+        {
+          "id": "NAO_PREVIDENCIARIO-000010",
+          "title": "Inscrição em dívida ativa",
+          "source": "pgfn",
+          "file": "nao_previdenciario_normalizado.csv",
+          "line": 11,
+          "origin": "csv",
+          "date": "25/07/2010",
+          "status": "ATIVA A SER COBRADA",
+          "amount": 1773214.72,
+          "description": "R D Ativa - Crédito Rural - Prog Nac Fortalec Agric Familiar",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "NAO_PREVIDENCIARIO-000010",
+            "CNPJ_NORMALIZADO": "96000009000171",
+            "VALOR_NUMERICO": "1773214.72",
+            "CPF_CNPJ": "96.000.009/0001-71",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "CORRESPONSAVEL",
+            "NOME_DEVEDOR": "INTEGRA OBRAS E SERVICOS S.A.",
+            "UF_DEVEDOR": "MA",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "8000000942562",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "ATIVA A SER COBRADA",
+            "RECEITA_PRINCIPAL": "R D Ativa - Crédito Rural - Prog Nac Fortalec Agric Familiar",
+            "DATA_INSCRICAO": "25/07/2010",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "1773214.72"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Alteração societária",
+      "change": -56,
+      "lastReview": "2026-09-06",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 642,
+          "baseScore": 642,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -358.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 642,
+          "baseScore": 642,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -358.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 642,
+          "baseScore": 642,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -358.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 642,
+          "baseScore": 642,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -358.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "96000010000104",
+      "name": "Jardins Obras E Servicos Ltda",
+      "cnpj": "96.000.010/0001-04",
+      "state": "RR",
+      "city": "",
+      "segment": "Parceiro B2B",
+      "crop": "Milho",
+      "exposure": 104000,
+      "securedRatio": 0.4,
+      "modality": "barter",
+      "term": 90,
+      "group": "Grupo Cerrado",
+      "risks": [9, 17, 64, 60, 0],
+      "evidence": [
+        {
+          "id": "NAO_PREVIDENCIARIO-000011",
+          "title": "Inscrição em dívida ativa",
+          "source": "pgfn",
+          "file": "nao_previdenciario_normalizado.csv",
+          "line": 12,
+          "origin": "csv",
+          "date": "14/10/2011",
+          "status": "ATIVA A SER COBRADA",
+          "amount": 522246.46,
+          "description": "Receita da dívida ativa - PIS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "NAO_PREVIDENCIARIO-000011",
+            "CNPJ_NORMALIZADO": "96000010000104",
+            "VALOR_NUMERICO": "522246.46",
+            "CPF_CNPJ": "96.000.010/0001-04",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "PRINCIPAL",
+            "NOME_DEVEDOR": "JARDINS OBRAS E SERVICOS LTDA",
+            "UF_DEVEDOR": "RR",
+            "UNIDADE_RESPONSAVEL": "RORAIMA",
+            "NUMERO_INSCRICAO": "8000001047291",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "ATIVA A SER COBRADA",
+            "RECEITA_PRINCIPAL": "Receita da dívida ativa - PIS",
+            "DATA_INSCRICAO": "14/10/2011",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "522246.46"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -67,
+      "lastReview": "2026-09-05",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "95000000000106",
+      "name": "Alvorada Equipamentos Ltda",
+      "cnpj": "95.000.000/0001-06",
+      "state": "DF",
+      "city": "",
+      "segment": "Distribuidor",
+      "crop": "Cana-de-açúcar",
+      "exposure": 141000,
+      "securedRatio": 0.8,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [26, 28, 1, 60, 0],
+      "evidence": [
+        {
+          "id": "PREVIDENCIARIO-000001",
+          "title": "Inscrição em dívida ativa",
+          "source": "previdencia",
+          "file": "previdenciario_normalizado.csv",
+          "line": 2,
+          "origin": "csv",
+          "date": "18/05/2013",
+          "status": "CREDITO PREVIDENCIARIO SUB JUDICE",
+          "amount": 654191.43,
+          "description": "Não Informado",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "PREVIDENCIARIO-000001",
+            "CNPJ_NORMALIZADO": "95000000000106",
+            "VALOR_NUMERICO": "654191.43",
+            "CPF_CNPJ": "95.000.000/0001-06",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Corresponsável",
+            "NOME_DEVEDOR": "ALVORADA EQUIPAMENTOS LTDA",
+            "UF_DEVEDOR": "DF",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "600000000",
+            "TIPO_SITUACAO_INSCRICAO": "Benefício Fiscal",
+            "SITUACAO_INSCRICAO": "CREDITO PREVIDENCIARIO SUB JUDICE",
+            "TIPO_CREDITO": "Não Informado",
+            "DATA_INSCRICAO": "18/05/2013",
+            "INDICADOR_AJUIZADO": "SIM",
+            "VALOR_CONSOLIDADO": "654191.43"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -78,
+      "lastReview": "2026-09-04",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "95000001000142",
+      "name": "Boa Vista Equipamentos S.A.",
+      "cnpj": "95.000.001/0001-42",
+      "state": "SC",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Algodão",
+      "exposure": 178000,
+      "securedRatio": 0.35,
+      "modality": "a_vista",
+      "term": 180,
+      "group": "Independente",
+      "risks": [43, 39, 8, 60, 0],
+      "evidence": [
+        {
+          "id": "PREVIDENCIARIO-000002",
+          "title": "Inscrição em dívida ativa",
+          "source": "previdencia",
+          "file": "previdenciario_normalizado.csv",
+          "line": 3,
+          "origin": "csv",
+          "date": "05/05/2022",
+          "status": "AJUIZAMENTO   DISTRIBUICAO",
+          "amount": 1010753.25,
+          "description": "OUTROS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "PREVIDENCIARIO-000002",
+            "CNPJ_NORMALIZADO": "95000001000142",
+            "VALOR_NUMERICO": "1010753.25",
+            "CPF_CNPJ": "95.000.001/0001-42",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "BOA VISTA EQUIPAMENTOS S.A.",
+            "UF_DEVEDOR": "SC",
+            "UNIDADE_RESPONSAVEL": "4ª REGIÃO",
+            "NUMERO_INSCRICAO": "600000001",
+            "TIPO_SITUACAO_INSCRICAO": "Garantia",
+            "SITUACAO_INSCRICAO": "AJUIZAMENTO   DISTRIBUICAO",
+            "TIPO_CREDITO": "OUTROS",
+            "DATA_INSCRICAO": "05/05/2022",
+            "INDICADOR_AJUIZADO": "SIM",
+            "VALOR_CONSOLIDADO": "1010753.25"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Execução distribuída",
+      "change": -89,
+      "lastReview": "2026-09-03",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "95000002000197",
+      "name": "Caminho Verde Equipamentos Ltda",
+      "cnpj": "95.000.002/0001-97",
+      "state": "PA",
+      "city": "",
+      "segment": "Parceiro B2B",
+      "crop": "Soja",
+      "exposure": 215000,
+      "securedRatio": 0.2,
+      "modality": "prazo",
+      "term": 60,
+      "group": "Independente",
+      "risks": [60, 50, 15, 60, 0],
+      "evidence": [
+        {
+          "id": "PREVIDENCIARIO-000003",
+          "title": "Inscrição em dívida ativa",
+          "source": "previdencia",
+          "file": "previdenciario_normalizado.csv",
+          "line": 4,
+          "origin": "csv",
+          "date": "15/06/2019",
+          "status": "NEGOCIADO NO SISPAR",
+          "amount": 554611.73,
+          "description": "OUTROS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "PREVIDENCIARIO-000003",
+            "CNPJ_NORMALIZADO": "95000002000197",
+            "VALOR_NUMERICO": "554611.73",
+            "CPF_CNPJ": "95.000.002/0001-97",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "CAMINHO VERDE EQUIPAMENTOS LTDA",
+            "UF_DEVEDOR": "PA",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "600000002",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "NEGOCIADO NO SISPAR",
+            "TIPO_CREDITO": "OUTROS",
+            "DATA_INSCRICAO": "15/06/2019",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "554611.73"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -100,
+      "lastReview": "2026-09-12",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "95000003000131",
+      "name": "Campos Do Sul Equipamentos Ltda",
+      "cnpj": "95.000.003/0001-31",
+      "state": "MG",
+      "city": "",
+      "segment": "Distribuidor",
+      "crop": "Milho",
+      "exposure": 252000,
+      "securedRatio": 0.65,
+      "modality": "barter",
+      "term": 90,
+      "group": "Grupo Cerrado",
+      "risks": [7, 12, 15, 12, 0],
+      "evidence": [
+        {
+          "id": "PREVIDENCIARIO-000004",
+          "title": "Inscrição em dívida ativa",
+          "source": "previdencia",
+          "file": "previdenciario_normalizado.csv",
+          "line": 5,
+          "origin": "csv",
+          "date": "03/08/2021",
+          "status": "CREDITO EM DILIGENCIA NA AREA ADMINISTRATIVA",
+          "amount": 1071554.71,
+          "description": "OUTROS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "PREVIDENCIARIO-000004",
+            "CNPJ_NORMALIZADO": "95000003000131",
+            "VALOR_NUMERICO": "1071554.71",
+            "CPF_CNPJ": "95.000.003/0001-31",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "CAMPOS DO SUL EQUIPAMENTOS LTDA",
+            "UF_DEVEDOR": "MG",
+            "UNIDADE_RESPONSAVEL": "6ª REGIÃO",
+            "NUMERO_INSCRICAO": "600000003",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "CREDITO EM DILIGENCIA NA AREA ADMINISTRATIVA",
+            "TIPO_CREDITO": "OUTROS",
+            "DATA_INSCRICAO": "03/08/2021",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "1071554.71"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -111,
+      "lastReview": "2026-09-11",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "95000004000186",
+      "name": "Cerrado Equipamentos S.A.",
+      "cnpj": "95.000.004/0001-86",
+      "state": "RO",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Cana-de-açúcar",
+      "exposure": 289000,
+      "securedRatio": 0.4,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [19, 12, 29, 60, 0],
+      "evidence": [
+        {
+          "id": "PREVIDENCIARIO-000005",
+          "title": "Inscrição em dívida ativa",
+          "source": "previdencia",
+          "file": "previdenciario_normalizado.csv",
+          "line": 6,
+          "origin": "csv",
+          "date": "29/04/2016",
+          "status": "RETORNO DA DILIGENCIA",
+          "amount": 1466965.13,
+          "description": "OUTROS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "PREVIDENCIARIO-000005",
+            "CNPJ_NORMALIZADO": "95000004000186",
+            "VALOR_NUMERICO": "1466965.13",
+            "CPF_CNPJ": "95.000.004/0001-86",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "CERRADO EQUIPAMENTOS S.A.",
+            "UF_DEVEDOR": "RO",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "600000004",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "RETORNO DA DILIGENCIA",
+            "TIPO_CREDITO": "OUTROS",
+            "DATA_INSCRICAO": "29/04/2016",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "1466965.13"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -122,
+      "lastReview": "2026-09-10",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "95000005000120",
+      "name": "Costa Azul Equipamentos Ltda",
+      "cnpj": "95.000.005/0001-20",
+      "state": "CE",
+      "city": "",
+      "segment": "Parceiro B2B",
+      "crop": "Algodão",
+      "exposure": 326000,
+      "securedRatio": 0.8,
+      "modality": "a_vista",
+      "term": 180,
+      "group": "Independente",
+      "risks": [36, 23, 36, 60, 0],
+      "evidence": [
+        {
+          "id": "PREVIDENCIARIO-000006",
+          "title": "Inscrição em dívida ativa",
+          "source": "previdencia",
+          "file": "previdenciario_normalizado.csv",
+          "line": 7,
+          "origin": "csv",
+          "date": "04/04/2019",
+          "status": "RETORNO A RFB PARA ANALISE",
+          "amount": 706332.98,
+          "description": "OUTROS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "PREVIDENCIARIO-000006",
+            "CNPJ_NORMALIZADO": "95000005000120",
+            "VALOR_NUMERICO": "706332.98",
+            "CPF_CNPJ": "95.000.005/0001-20",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "COSTA AZUL EQUIPAMENTOS LTDA",
+            "UF_DEVEDOR": "CE",
+            "UNIDADE_RESPONSAVEL": "5ª REGIÃO",
+            "NUMERO_INSCRICAO": "600000005",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "RETORNO A RFB PARA ANALISE",
+            "TIPO_CREDITO": "OUTROS",
+            "DATA_INSCRICAO": "04/04/2019",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "706332.98"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Alteração societária",
+      "change": -133,
+      "lastReview": "2026-09-09",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "95000006000175",
+      "name": "Cruzeiro Equipamentos Ltda",
+      "cnpj": "95.000.006/0001-75",
+      "state": "RR",
+      "city": "",
+      "segment": "Distribuidor",
+      "crop": "Soja",
+      "exposure": 363000,
+      "securedRatio": 0.35,
+      "modality": "prazo",
+      "term": 60,
+      "group": "Independente",
+      "risks": [53, 34, 43, 60, 0],
+      "evidence": [
+        {
+          "id": "PREVIDENCIARIO-000007",
+          "title": "Inscrição em dívida ativa",
+          "source": "previdencia",
+          "file": "previdenciario_normalizado.csv",
+          "line": 8,
+          "origin": "csv",
+          "date": "18/05/2026",
+          "status": "PRE INSCRICAO DE CREDITO DE LDCG DCG",
+          "amount": 150747.46,
+          "description": "OUTROS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "PREVIDENCIARIO-000007",
+            "CNPJ_NORMALIZADO": "95000006000175",
+            "VALOR_NUMERICO": "150747.46",
+            "CPF_CNPJ": "95.000.006/0001-75",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "CRUZEIRO EQUIPAMENTOS LTDA",
+            "UF_DEVEDOR": "RR",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "600000006",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "PRE INSCRICAO DE CREDITO DE LDCG DCG",
+            "TIPO_CREDITO": "OUTROS",
+            "DATA_INSCRICAO": "18/05/2026",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "150747.46"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -144,
+      "lastReview": "2026-09-08",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "95000007000110",
+      "name": "Estrela Do Norte Equipamentos S.A.",
+      "cnpj": "95.000.007/0001-10",
+      "state": "GO",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Milho",
+      "exposure": 400000,
+      "securedRatio": 0.2,
+      "modality": "barter",
+      "term": 90,
+      "group": "Grupo Cerrado",
+      "risks": [70, 45, 50, 60, 0],
+      "evidence": [
+        {
+          "id": "PREVIDENCIARIO-000008",
+          "title": "Inscrição em dívida ativa",
+          "source": "previdencia",
+          "file": "previdenciario_normalizado.csv",
+          "line": 9,
+          "origin": "csv",
+          "date": "12/07/2019",
+          "status": "CREDITO PREVIDENCIARIO SUB JUDICE",
+          "amount": 351284.29,
+          "description": "Não Informado",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "PREVIDENCIARIO-000008",
+            "CNPJ_NORMALIZADO": "95000007000110",
+            "VALOR_NUMERICO": "351284.29",
+            "CPF_CNPJ": "95.000.007/0001-10",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "ESTRELA DO NORTE EQUIPAMENTOS S.A.",
+            "UF_DEVEDOR": "GO",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "600000007",
+            "TIPO_SITUACAO_INSCRICAO": "Garantia",
+            "SITUACAO_INSCRICAO": "CREDITO PREVIDENCIARIO SUB JUDICE",
+            "TIPO_CREDITO": "Não Informado",
+            "DATA_INSCRICAO": "12/07/2019",
+            "INDICADOR_AJUIZADO": "SIM",
+            "VALOR_CONSOLIDADO": "351284.29"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Execução distribuída",
+      "change": -20,
+      "lastReview": "2026-09-07",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "95000008000164",
+      "name": "Horizonte Equipamentos Ltda",
+      "cnpj": "95.000.008/0001-64",
+      "state": "TO",
+      "city": "",
+      "segment": "Parceiro B2B",
+      "crop": "Cana-de-açúcar",
+      "exposure": 437000,
+      "securedRatio": 0.65,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [12, 56, 57, 60, 0],
+      "evidence": [
+        {
+          "id": "PREVIDENCIARIO-000009",
+          "title": "Inscrição em dívida ativa",
+          "source": "previdencia",
+          "file": "previdenciario_normalizado.csv",
+          "line": 10,
+          "origin": "csv",
+          "date": "31/03/2017",
+          "status": "AJUIZAMENTO   DISTRIBUICAO",
+          "amount": 1497653.08,
+          "description": "OUTROS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "PREVIDENCIARIO-000009",
+            "CNPJ_NORMALIZADO": "95000008000164",
+            "VALOR_NUMERICO": "1497653.08",
+            "CPF_CNPJ": "95.000.008/0001-64",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "HORIZONTE EQUIPAMENTOS LTDA",
+            "UF_DEVEDOR": "TO",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "600000008",
+            "TIPO_SITUACAO_INSCRICAO": "Garantia",
+            "SITUACAO_INSCRICAO": "AJUIZAMENTO   DISTRIBUICAO",
+            "TIPO_CREDITO": "OUTROS",
+            "DATA_INSCRICAO": "31/03/2017",
+            "INDICADOR_AJUIZADO": "SIM",
+            "VALOR_CONSOLIDADO": "1497653.08"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -31,
+      "lastReview": "2026-09-06",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_ATIVA_PGFN"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 857,
+          "baseScore": 857,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_ATIVA_PGFN",
+              "points": -143.3
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "94000000000135",
+      "name": "Alvorada Construcoes Ltda",
+      "cnpj": "94.000.000/0001-35",
+      "state": "DF",
+      "city": "",
+      "segment": "Distribuidor",
+      "crop": "Algodão",
+      "exposure": 474000,
+      "securedRatio": 0.4,
+      "modality": "a_vista",
+      "term": 180,
+      "group": "Independente",
+      "risks": [29, 7, 64, 60, 0],
+      "evidence": [
+        {
+          "id": "FGTS-000001",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "fgts_normalizado.csv",
+          "line": 2,
+          "origin": "csv",
+          "date": "17/02/2016",
+          "status": "AJUIZADA",
+          "amount": 246806.67,
+          "description": "Contribuições LC110 (FGTS)",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "FGTS-000001",
+            "CNPJ_NORMALIZADO": "94000000000135",
+            "VALOR_NUMERICO": "246806.67",
+            "CPF_CNPJ": "94.000.000/0001-35",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Corresponsável",
+            "NOME_DEVEDOR": "ALVORADA CONSTRUCOES LTDA",
+            "UF_DEVEDOR": "DF",
+            "UNIDADE_RESPONSAVEL": "Não se Aplica",
+            "ENTIDADE_RESPONSAVEL": "CAIXA",
+            "UNIDADE_INSCRICAO": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "CSDF2016000001",
+            "TIPO_SITUACAO_INSCRICAO": "Benefício Fiscal",
+            "SITUACAO_INSCRICAO": "AJUIZADA",
+            "RECEITA_PRINCIPAL": "Contribuições LC110 (FGTS)",
+            "DATA_INSCRICAO": "17/02/2016",
+            "INDICADOR_AJUIZADO": "SIM",
+            "VALOR_CONSOLIDADO": "246806.67"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -42,
+      "lastReview": "2026-09-05",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 815,
+          "baseScore": 815,
+          "rating": "A",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -184.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "94000001000180",
+      "name": "Boa Vista Construcoes Ltda",
+      "cnpj": "94.000.001/0001-80",
+      "state": "AP",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Soja",
+      "exposure": 511000,
+      "securedRatio": 0.8,
+      "modality": "prazo",
+      "term": 60,
+      "group": "Independente",
+      "risks": [7, 12, 15, 12, 0],
+      "evidence": [
+        {
+          "id": "FGTS-000002",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "fgts_normalizado.csv",
+          "line": 3,
+          "origin": "csv",
+          "date": "26/07/2020",
+          "status": "INSCRITA",
+          "amount": 136107.1,
+          "description": "Contribuições FGTS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "FGTS-000002",
+            "CNPJ_NORMALIZADO": "94000001000180",
+            "VALOR_NUMERICO": "136107.10",
+            "CPF_CNPJ": "94.000.001/0001-80",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "BOA VISTA CONSTRUCOES LTDA",
+            "UF_DEVEDOR": "AP",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "ENTIDADE_RESPONSAVEL": "PGFN",
+            "UNIDADE_INSCRICAO": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "FGAP2020000002",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "INSCRITA",
+            "RECEITA_PRINCIPAL": "Contribuições FGTS",
+            "DATA_INSCRICAO": "26/07/2020",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "136107.10"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -53,
+      "lastReview": "2026-09-04",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "94000002000124",
+      "name": "Caminho Verde Construcoes S.A.",
+      "cnpj": "94.000.002/0001-24",
+      "state": "BA",
+      "city": "",
+      "segment": "Parceiro B2B",
+      "crop": "Milho",
+      "exposure": 548000,
+      "securedRatio": 0.35,
+      "modality": "barter",
+      "term": 90,
+      "group": "Grupo Cerrado",
+      "risks": [63, 29, 8, 60, 0],
+      "evidence": [
+        {
+          "id": "FGTS-000003",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "fgts_normalizado.csv",
+          "line": 4,
+          "origin": "csv",
+          "date": "22/07/2015",
+          "status": "INSCRITA",
+          "amount": 90672.67,
+          "description": "Contribuições FGTS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "FGTS-000003",
+            "CNPJ_NORMALIZADO": "94000002000124",
+            "VALOR_NUMERICO": "90672.67",
+            "CPF_CNPJ": "94.000.002/0001-24",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "CAMINHO VERDE CONSTRUCOES S.A.",
+            "UF_DEVEDOR": "BA",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "ENTIDADE_RESPONSAVEL": "PGFN",
+            "UNIDADE_INSCRICAO": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "FGBA2015000003",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "INSCRITA",
+            "RECEITA_PRINCIPAL": "Contribuições FGTS",
+            "DATA_INSCRICAO": "22/07/2015",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "90672.67"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -64,
+      "lastReview": "2026-09-03",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "94000003000179",
+      "name": "Campos Do Sul Construcoes Ltda",
+      "cnpj": "94.000.003/0001-79",
+      "state": "AM",
+      "city": "",
+      "segment": "Distribuidor",
+      "crop": "Cana-de-açúcar",
+      "exposure": 585000,
+      "securedRatio": 0.2,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [5, 40, 15, 60, 0],
+      "evidence": [
+        {
+          "id": "FGTS-000004",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "fgts_normalizado.csv",
+          "line": 5,
+          "origin": "csv",
+          "date": "31/05/2014",
+          "status": "INSCRITA",
+          "amount": 45850.69,
+          "description": "Contribuições FGTS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "FGTS-000004",
+            "CNPJ_NORMALIZADO": "94000003000179",
+            "VALOR_NUMERICO": "45850.69",
+            "CPF_CNPJ": "94.000.003/0001-79",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "CAMPOS DO SUL CONSTRUCOES LTDA",
+            "UF_DEVEDOR": "AM",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "ENTIDADE_RESPONSAVEL": "PGFN",
+            "UNIDADE_INSCRICAO": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "CSAM2014000004",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "INSCRITA",
+            "RECEITA_PRINCIPAL": "Contribuições FGTS",
+            "DATA_INSCRICAO": "31/05/2014",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "45850.69"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Alteração societária",
+      "change": -75,
+      "lastReview": "2026-09-12",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "94000004000113",
+      "name": "Cerrado Construcoes Ltda",
+      "cnpj": "94.000.004/0001-13",
+      "state": "TO",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Algodão",
+      "exposure": 622000,
+      "securedRatio": 0.65,
+      "modality": "a_vista",
+      "term": 180,
+      "group": "Independente",
+      "risks": [22, 51, 22, 60, 0],
+      "evidence": [
+        {
+          "id": "FGTS-000005",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "fgts_normalizado.csv",
+          "line": 6,
+          "origin": "csv",
+          "date": "05/08/2020",
+          "status": "INSCRITA",
+          "amount": 385009.99,
+          "description": "Contribuições LC110 (FGTS)",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "FGTS-000005",
+            "CNPJ_NORMALIZADO": "94000004000113",
+            "VALOR_NUMERICO": "385009.99",
+            "CPF_CNPJ": "94.000.004/0001-13",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "CERRADO CONSTRUCOES LTDA",
+            "UF_DEVEDOR": "TO",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "ENTIDADE_RESPONSAVEL": "PGFN",
+            "UNIDADE_INSCRICAO": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "FGTO2020000005",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "INSCRITA",
+            "RECEITA_PRINCIPAL": "Contribuições LC110 (FGTS)",
+            "DATA_INSCRICAO": "05/08/2020",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "385009.99"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": "Execução distribuída",
+      "change": -86,
+      "lastReview": "2026-09-11",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "94000005000168",
+      "name": "Costa Azul Construcoes S.A.",
+      "cnpj": "94.000.005/0001-68",
+      "state": "CE",
+      "city": "",
+      "segment": "Parceiro B2B",
+      "crop": "Soja",
+      "exposure": 659000,
+      "securedRatio": 0.4,
+      "modality": "prazo",
+      "term": 60,
+      "group": "Independente",
+      "risks": [39, 2, 29, 60, 0],
+      "evidence": [
+        {
+          "id": "FGTS-000006",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "fgts_normalizado.csv",
+          "line": 7,
+          "origin": "csv",
+          "date": "23/03/2023",
+          "status": "AJUIZADA",
+          "amount": 238214.0,
+          "description": "Contribuições FGTS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "FGTS-000006",
+            "CNPJ_NORMALIZADO": "94000005000168",
+            "VALOR_NUMERICO": "238214.00",
+            "CPF_CNPJ": "94.000.005/0001-68",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "COSTA AZUL CONSTRUCOES S.A.",
+            "UF_DEVEDOR": "CE",
+            "UNIDADE_RESPONSAVEL": "5ª REGIÃO",
+            "ENTIDADE_RESPONSAVEL": "PGFN",
+            "UNIDADE_INSCRICAO": "5ª REGIÃO",
+            "NUMERO_INSCRICAO": "FGCE2023000006",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "AJUIZADA",
+            "RECEITA_PRINCIPAL": "Contribuições FGTS",
+            "DATA_INSCRICAO": "23/03/2023",
+            "INDICADOR_AJUIZADO": "SIM",
+            "VALOR_CONSOLIDADO": "238214.00"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -97,
+      "lastReview": "2026-09-10",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 598,
+          "baseScore": 598,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -401.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 598,
+          "baseScore": 598,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -401.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 598,
+          "baseScore": 598,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -401.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 598,
+          "baseScore": 598,
+          "rating": "C",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -401.8
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "94000006000102",
+      "name": "Cruzeiro Construcoes Ltda",
+      "cnpj": "94.000.006/0001-02",
+      "state": "PA",
+      "city": "",
+      "segment": "Distribuidor",
+      "crop": "Milho",
+      "exposure": 86000,
+      "securedRatio": 0.8,
+      "modality": "barter",
+      "term": 90,
+      "group": "Grupo Cerrado",
+      "risks": [56, 13, 36, 60, 0],
+      "evidence": [
+        {
+          "id": "FGTS-000007",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "fgts_normalizado.csv",
+          "line": 8,
+          "origin": "csv",
+          "date": "03/04/2012",
+          "status": "INSCRITA",
+          "amount": 883843.76,
+          "description": "Contribuições FGTS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "FGTS-000007",
+            "CNPJ_NORMALIZADO": "94000006000102",
+            "VALOR_NUMERICO": "883843.76",
+            "CPF_CNPJ": "94.000.006/0001-02",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "CRUZEIRO CONSTRUCOES LTDA",
+            "UF_DEVEDOR": "PA",
+            "UNIDADE_RESPONSAVEL": "1ª REGIÃO",
+            "ENTIDADE_RESPONSAVEL": "PGFN",
+            "UNIDADE_INSCRICAO": "1ª REGIÃO",
+            "NUMERO_INSCRICAO": "CSPA2012000007",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "INSCRITA",
+            "RECEITA_PRINCIPAL": "Contribuições FGTS",
+            "DATA_INSCRICAO": "03/04/2012",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "883843.76"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -108,
+      "lastReview": "2026-09-09",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "94000007000157",
+      "name": "Estrela Do Norte Construcoes Ltda",
+      "cnpj": "94.000.007/0001-57",
+      "state": "SP",
+      "city": "",
+      "segment": "Agroindústria",
+      "crop": "Cana-de-açúcar",
+      "exposure": 123000,
+      "securedRatio": 0.35,
+      "modality": "cpr",
+      "term": 120,
+      "group": "Grupo Horizonte",
+      "risks": [73, 24, 43, 60, 0],
+      "evidence": [
+        {
+          "id": "FGTS-000008",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "fgts_normalizado.csv",
+          "line": 9,
+          "origin": "csv",
+          "date": "07/04/2013",
+          "status": "INSCRITA",
+          "amount": 138276.49,
+          "description": "Contribuições FGTS",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "FGTS-000008",
+            "CNPJ_NORMALIZADO": "94000007000157",
+            "VALOR_NUMERICO": "138276.49",
+            "CPF_CNPJ": "94.000.007/0001-57",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "ESTRELA DO NORTE CONSTRUCOES LTDA",
+            "UF_DEVEDOR": "SP",
+            "UNIDADE_RESPONSAVEL": "3ª REGIÃO",
+            "ENTIDADE_RESPONSAVEL": "PGFN",
+            "UNIDADE_INSCRICAO": "3ª REGIÃO",
+            "NUMERO_INSCRICAO": "FGSP2013000008",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "INSCRITA",
+            "RECEITA_PRINCIPAL": "Contribuições FGTS",
+            "DATA_INSCRICAO": "07/04/2013",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "138276.49"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "demo",
+      "earlySignal": null,
+      "change": -119,
+      "lastReview": "2026-09-08",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 683,
+          "baseScore": 683,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -317.0
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    },
+    {
+      "id": "94000008000100",
+      "name": "Horizonte Construcoes S.A.",
+      "cnpj": "94.000.008/0001-00",
+      "state": "PE",
+      "city": "",
+      "segment": "Parceiro B2B",
+      "crop": "Algodão",
+      "exposure": 160000,
+      "securedRatio": 0.2,
+      "modality": "a_vista",
+      "term": 180,
+      "group": "Independente",
+      "risks": [7, 12, 15, 12, 0],
+      "evidence": [
+        {
+          "id": "FGTS-000009",
+          "title": "Inscrição de FGTS",
+          "source": "fgts",
+          "file": "fgts_normalizado.csv",
+          "line": 10,
+          "origin": "csv",
+          "date": "09/09/2016",
+          "status": "INSCRITA",
+          "amount": 288907.06,
+          "description": "Contribuições LC110 (FGTS)",
+          "raw": {
+            "ID_REGISTRO_NORMALIZADO": "FGTS-000009",
+            "CNPJ_NORMALIZADO": "94000008000100",
+            "VALOR_NUMERICO": "288907.06",
+            "CPF_CNPJ": "94.000.008/0001-00",
+            "TIPO_PESSOA": "Pessoa jurídica",
+            "TIPO_DEVEDOR": "Principal",
+            "NOME_DEVEDOR": "HORIZONTE CONSTRUCOES S.A.",
+            "UF_DEVEDOR": "PE",
+            "UNIDADE_RESPONSAVEL": "Não se Aplica",
+            "ENTIDADE_RESPONSAVEL": "CAIXA",
+            "UNIDADE_INSCRICAO": "5ª REGIÃO",
+            "NUMERO_INSCRICAO": "FGPE2016000009",
+            "TIPO_SITUACAO_INSCRICAO": "Em cobrança",
+            "SITUACAO_INSCRICAO": "INSCRITA",
+            "RECEITA_PRINCIPAL": "Contribuições LC110 (FGTS)",
+            "DATA_INSCRICAO": "09/09/2016",
+            "INDICADOR_AJUIZADO": "NAO",
+            "VALOR_CONSOLIDADO": "288907.06"
+          }
+        }
+      ],
+      "embargoConfirmed": false,
+      "rj": false,
+      "coverage": "insufficient",
+      "earlySignal": null,
+      "change": -130,
+      "lastReview": "2026-09-07",
+      "origin": "csv",
+      "sourceNote": "Identidade e evidência do CSV. Exposição, contexto, grupos, histórico e pilares são cenários simulados.",
+      "agentFlagCodes": ["DIVIDA_FGTS"],
+      "agentAssessments": {
+        "a_vista": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "prazo": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "barter": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        },
+        "cpr": {
+          "score": 742,
+          "baseScore": 742,
+          "rating": "B",
+          "rules": [
+            {
+              "label": "DIVIDA_FGTS",
+              "points": -258.5
+            }
+          ],
+          "override": null,
+          "policy": "agent-v04"
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "ibama",
+      "file": "auto_infracao_normalizado.csv",
+      "name": "Ibama",
+      "dimension": "Ambiental",
+      "count": 1000,
+      "hash": "a9867b8b974557924d488d88afde18418c0fb2221f543fe62ebdab3095b4f24b",
+      "skip": 0,
+      "masked": 0,
+      "description": "Autos de infração. Auto não cancelado não comprova embargo ativo."
+    },
+    {
+      "id": "pgfn",
+      "file": "nao_previdenciario_normalizado.csv",
+      "name": "PGFN • não previdenciária",
+      "dimension": "Fiscal",
+      "count": 1000,
+      "hash": "9fe023a8740db3a70f37eac107150051ee8ef976d969dab33e05426b060b5e26",
+      "skip": 0,
+      "masked": 136,
+      "description": "Inscrições sintéticas; valores e situações preservados do CSV."
+    },
+    {
+      "id": "previdencia",
+      "file": "previdenciario_normalizado.csv",
+      "name": "PGFN • previdenciária",
+      "dimension": "Fiscal",
+      "count": 1000,
+      "hash": "a3dcd05d151308bd42f488e2d6b73fef0242677fbe845737e75648207aef9e39",
+      "skip": 0,
+      "masked": 0,
+      "description": "Inscrições sintéticas; valores e situações preservados do CSV."
+    },
+    {
+      "id": "fgts",
+      "file": "fgts_normalizado.csv",
+      "name": "PGFN • FGTS",
+      "dimension": "Trabalhista",
+      "count": 1000,
+      "hash": "9aff85bf3fe4678e805e26660685275b60ded15d18773b81ddf524cff8297b48",
+      "skip": 0,
+      "masked": 0,
+      "description": "Inscrições sintéticas; valores e situações preservados do CSV."
+    },
+    {
+      "id": "zarc",
+      "file": "siszarc_normalizado.csv",
+      "name": "SISZARC",
+      "dimension": "Agronômica",
+      "count": 1000,
+      "hash": "f260d796b1b3e528b38875a8c3139ef9c06c0f3a3acfdecf6bd933a8144d6724",
+      "skip": 0,
+      "masked": 0,
+      "description": "Catálogo de cultivares. Não contém janela de plantio, solo ou nível de risco."
+    },
+    {
+      "id": "inmet",
+      "file": "inmet_normalizado.csv",
+      "name": "INMET • estação A999",
+      "dimension": "Climática",
+      "count": 1000,
+      "hash": "a0f7fb19af1f9e033e62da9e7e4ffd4f43ae93c8a508296ae60f55d28138a062",
+      "skip": 0,
+      "masked": 0,
+      "description": "Observações horárias sintéticas no DF. Sem vínculo com imóveis da carteira."
+    }
+  ],
+  "weather": [
+    {
+      "date": "2026-01-01",
+      "day": "01/01",
+      "observations": 24,
+      "rain": 17.4,
+      "temperature": 23.2
+    },
+    {
+      "date": "2026-01-02",
+      "day": "02/01",
+      "observations": 24,
+      "rain": 5.5,
+      "temperature": 24.4
+    },
+    {
+      "date": "2026-01-03",
+      "day": "03/01",
+      "observations": 24,
+      "rain": 2.3,
+      "temperature": 24.7
+    },
+    {
+      "date": "2026-01-04",
+      "day": "04/01",
+      "observations": 24,
+      "rain": 18.5,
+      "temperature": 24.5
+    },
+    {
+      "date": "2026-01-05",
+      "day": "05/01",
+      "observations": 24,
+      "rain": 6.1,
+      "temperature": 23.4
+    },
+    {
+      "date": "2026-01-06",
+      "day": "06/01",
+      "observations": 24,
+      "rain": 24.1,
+      "temperature": 22.4
+    },
+    {
+      "date": "2026-01-07",
+      "day": "07/01",
+      "observations": 24,
+      "rain": 26.6,
+      "temperature": 21.5
+    },
+    {
+      "date": "2026-01-08",
+      "day": "08/01",
+      "observations": 24,
+      "rain": 26.5,
+      "temperature": 21.8
+    },
+    {
+      "date": "2026-01-09",
+      "day": "09/01",
+      "observations": 24,
+      "rain": 19.6,
+      "temperature": 22.5
+    },
+    {
+      "date": "2026-01-10",
+      "day": "10/01",
+      "observations": 24,
+      "rain": 24.5,
+      "temperature": 23.8
+    },
+    {
+      "date": "2026-01-11",
+      "day": "11/01",
+      "observations": 24,
+      "rain": 7.1,
+      "temperature": 24.6
+    },
+    {
+      "date": "2026-01-12",
+      "day": "12/01",
+      "observations": 24,
+      "rain": 23.3,
+      "temperature": 24.7
+    },
+    {
+      "date": "2026-01-13",
+      "day": "13/01",
+      "observations": 24,
+      "rain": 28.1,
+      "temperature": 24.0
+    },
+    {
+      "date": "2026-01-14",
+      "day": "14/01",
+      "observations": 24,
+      "rain": 19.4,
+      "temperature": 22.9
+    },
+    {
+      "date": "2026-01-15",
+      "day": "15/01",
+      "observations": 24,
+      "rain": 2.7,
+      "temperature": 22.1
+    },
+    {
+      "date": "2026-01-16",
+      "day": "16/01",
+      "observations": 24,
+      "rain": 30.8,
+      "temperature": 21.8
+    },
+    {
+      "date": "2026-01-17",
+      "day": "17/01",
+      "observations": 24,
+      "rain": 12.7,
+      "temperature": 22.1
+    },
+    {
+      "date": "2026-01-18",
+      "day": "18/01",
+      "observations": 24,
+      "rain": 48.8,
+      "temperature": 22.8
+    },
+    {
+      "date": "2026-01-19",
+      "day": "19/01",
+      "observations": 24,
+      "rain": 31.4,
+      "temperature": 24.1
+    },
+    {
+      "date": "2026-01-20",
+      "day": "20/01",
+      "observations": 24,
+      "rain": 47.4,
+      "temperature": 24.6
+    },
+    {
+      "date": "2026-01-21",
+      "day": "21/01",
+      "observations": 24,
+      "rain": 1.9,
+      "temperature": 24.5
+    },
+    {
+      "date": "2026-01-22",
+      "day": "22/01",
+      "observations": 24,
+      "rain": 23.2,
+      "temperature": 23.6
+    },
+    {
+      "date": "2026-01-23",
+      "day": "23/01",
+      "observations": 24,
+      "rain": 40.0,
+      "temperature": 22.4
+    },
+    {
+      "date": "2026-01-24",
+      "day": "24/01",
+      "observations": 24,
+      "rain": 15.7,
+      "temperature": 21.7
+    },
+    {
+      "date": "2026-01-25",
+      "day": "25/01",
+      "observations": 24,
+      "rain": 14.5,
+      "temperature": 21.9
+    },
+    {
+      "date": "2026-01-26",
+      "day": "26/01",
+      "observations": 24,
+      "rain": 22.2,
+      "temperature": 22.5
+    },
+    {
+      "date": "2026-01-27",
+      "day": "27/01",
+      "observations": 24,
+      "rain": 26.8,
+      "temperature": 23.6
+    },
+    {
+      "date": "2026-01-28",
+      "day": "28/01",
+      "observations": 24,
+      "rain": 10.3,
+      "temperature": 24.7
+    },
+    {
+      "date": "2026-01-29",
+      "day": "29/01",
+      "observations": 24,
+      "rain": 27.2,
+      "temperature": 24.3
+    },
+    {
+      "date": "2026-01-30",
+      "day": "30/01",
+      "observations": 24,
+      "rain": 29.5,
+      "temperature": 24.0
+    },
+    {
+      "date": "2026-01-31",
+      "day": "31/01",
+      "observations": 24,
+      "rain": 0.7,
+      "temperature": 23.1
+    },
+    {
+      "date": "2026-02-01",
+      "day": "01/02",
+      "observations": 24,
+      "rain": 56.2,
+      "temperature": 21.8
+    },
+    {
+      "date": "2026-02-02",
+      "day": "02/02",
+      "observations": 24,
+      "rain": 22.7,
+      "temperature": 21.8
+    },
+    {
+      "date": "2026-02-03",
+      "day": "03/02",
+      "observations": 24,
+      "rain": 16.8,
+      "temperature": 22.2
+    },
+    {
+      "date": "2026-02-04",
+      "day": "04/02",
+      "observations": 24,
+      "rain": 15.4,
+      "temperature": 23.1
+    },
+    {
+      "date": "2026-02-05",
+      "day": "05/02",
+      "observations": 24,
+      "rain": 51.5,
+      "temperature": 24.0
+    },
+    {
+      "date": "2026-02-06",
+      "day": "06/02",
+      "observations": 24,
+      "rain": 22.9,
+      "temperature": 24.7
+    },
+    {
+      "date": "2026-02-07",
+      "day": "07/02",
+      "observations": 24,
+      "rain": 17.4,
+      "temperature": 24.4
+    },
+    {
+      "date": "2026-02-08",
+      "day": "08/02",
+      "observations": 24,
+      "rain": 22.5,
+      "temperature": 23.5
+    },
+    {
+      "date": "2026-02-09",
+      "day": "09/02",
+      "observations": 24,
+      "rain": 17.9,
+      "temperature": 22.5
+    },
+    {
+      "date": "2026-02-10",
+      "day": "10/02",
+      "observations": 24,
+      "rain": 2.1,
+      "temperature": 21.7
+    },
+    {
+      "date": "2026-02-11",
+      "day": "11/02",
+      "observations": 16,
+      "rain": 0.0,
+      "temperature": 22.2
+    }
+  ],
+  "cultivars": [
+    {
+      "name": "Milho 1ª Safra",
+      "count": 48
+    },
+    {
+      "name": "Arroz Irrigado",
+      "count": 48
+    },
+    {
+      "name": "MILHO - Zea mays L. - (1° Safra)",
+      "count": 48
+    },
+    {
+      "name": "ARROZ SEQUEIRO - Oryza sativa L.",
+      "count": 48
+    },
+    {
+      "name": "Milho 2ª Safra",
+      "count": 48
+    },
+    {
+      "name": "Feijão 1ª Safra",
+      "count": 48
+    },
+    {
+      "name": "MILHO - Zea mays L. - (2° Safra)",
+      "count": 48
+    },
+    {
+      "name": "Feijão 2ª Safra",
+      "count": 48
+    },
+    {
+      "name": "Milho 2ª Safra consorciado com Braquiária",
+      "count": 48
+    },
+    {
+      "name": "Trigo",
+      "count": 48
+    },
+    {
+      "name": "Milho Produtividade 3000 Kg-Ha",
+      "count": 48
+    },
+    {
+      "name": "Girassol",
+      "count": 48
+    },
+    {
+      "name": "Milho Produtividade 4000 Kg-Ha",
+      "count": 48
+    },
+    {
+      "name": "GIRASSOL - Helianthus annuus L.",
+      "count": 47
+    },
+    {
+      "name": "Milho Produtividade 5000 Kg-Ha",
+      "count": 47
+    },
+    {
+      "name": "Amendoim",
+      "count": 47
+    },
+    {
+      "name": "Milho Produtividade 6000 Kg-Ha",
+      "count": 47
+    },
+    {
+      "name": "Algodão Herbáceo",
+      "count": 47
+    },
+    {
+      "name": "Milho Produtividade 7000 Kg-Ha",
+      "count": 47
+    },
+    {
+      "name": "Sorgo",
+      "count": 47
+    },
+    {
+      "name": "Soja",
+      "count": 47
+    }
+  ],
+  "disclaimer": "Todos os CSVs são mocks. Dados comerciais e histórico da carteira são ilustrativos; não representam números da Krilltech."
+}
