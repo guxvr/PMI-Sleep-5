@@ -77,7 +77,11 @@ export function Chat() {
   const [statusError, setStatusError] = useState("");
   async function refreshStatus() {
     try {
-      setAgentStatus(await getAgentStatus());
+      const status = await getAgentStatus();
+      setAgentStatus((previous) => ({
+        ...status,
+        lastSuccess: previous?.lastSuccess || status.lastSuccess,
+      }));
       setStatusError("");
     } catch {
       setStatusError(
@@ -150,7 +154,12 @@ export function Chat() {
           ? await chatWithWatsonx(c, op, prompt, messages)
           : await gateway.chat(c, op, prompt);
       store.setChat(key, [...current, response]);
-      if (mode === "watsonx") void refreshStatus();
+      if (mode === "watsonx")
+        setAgentStatus((previous) =>
+          previous
+            ? { ...previous, lastSuccess: response.date, lastError: null }
+            : previous,
+        );
     } catch (err) {
       setInput(prompt);
       setError(

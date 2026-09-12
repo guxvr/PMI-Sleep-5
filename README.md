@@ -46,6 +46,8 @@ A [solução enviada pela equipe](docs/referencias/solucao.md) foi preservada co
 | `frontend/src/domain` | Tipos e regras exclusivamente demonstrativas |
 | `frontend/src/services/gateway.ts` | Adaptadores de demonstração e chat watsonx via backend |
 | `backend/server.mjs` | Ponte local, autenticação IAM e execução do agente live |
+| `backend/handler.mjs` | Implementação compartilhada da API local e Vercel |
+| `api/` e `vercel.json` | Funções e configuração do deploy web |
 | `frontend/src/services/store.tsx` | Estado e persistência locais |
 | `frontend/scripts/prepare_data.py` | Preparação determinística dos dados e rastreabilidade |
 | `docs/frontend-integracao.md` | Arquitetura, contrato proposto e pendências do backend |
@@ -68,4 +70,4 @@ npm run test:e2e
 
 Com Chromium já instalado no Linux, use `CHROMIUM_PATH=/usr/bin/chromium npm run test:e2e`. Os testes cobrem os snapshots de 160 combinações de cliente/modalidade contra o Python v4 sem importar o SDK IBM, regras críticas, cobertura insuficiente, fontes e jornadas em desktop/celular. Regeneração dos mocks: `npm run data:prepare`.
 
-O build em `frontend/dist` pode ser servido como SPA com fallback para `index.html`. O servidor Vite e a ponte IBM são para desenvolvimento local. Um deploy web compartilhado requer backend autenticado, gestão de segredos e proxy `/api`; não exponha a ponte local diretamente à internet. O guia PDF registra o contexto de negócio anterior à conexão live; o estado técnico atual está no README do backend.
+O build em `frontend/dist` é publicado na Vercel junto com funções `/api`. Configure o projeto a partir da raiz do repositório, mantenha as variáveis IBM somente no servidor e publique com `vercel --prod`. A configuração detalhada está em [backend/README.md](backend/README.md). O acesso público é demonstrativo, destinado ao hackathon; não há login de usuários ou dados de produção. O guia PDF registra o contexto de negócio anterior à conexão live; o estado técnico atual está no README do backend.

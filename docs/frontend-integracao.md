@@ -1,6 +1,6 @@
 # Integração do workspace de risco
 
-Versão 0.3 · 12/09/2026. Contrato **proposto para alinhamento** entre frontend, backend e agentes. A ponte local de chat já está implementada em `backend/server.mjs` (`GET /api/watsonx/status` e `POST /api/chat`). Os endpoints `/api/v1/*` abaixo continuam propostos.
+Versão 0.4 · 12/09/2026. Contrato **proposto para alinhamento** entre frontend, backend e agentes. A API de chat está implementada em `backend/handler.mjs` (`GET /api/watsonx/status` e `POST /api/chat`), usada pelo servidor local e pelas funções da Vercel. Os endpoints `/api/v1/*` abaixo continuam propostos.
 
 ## Limite entre a demonstração e o sistema
 
