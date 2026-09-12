@@ -1,0 +1,13 @@
+{
+  "name": "krill-risk-deployment",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "dev": "npm --prefix frontend run dev",
+    "dev:api": "node backend/server.mjs"
+  }
+}

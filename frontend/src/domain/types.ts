@@ -86,6 +86,9 @@ export type ChatMessage = {
   text: string;
   date: string;
   evidenceIds?: string[];
+  provider?: "mock" | "watsonx";
+  threadId?: string;
+  agentVersion?: number;
 };
 export type Source = {
   id: string;

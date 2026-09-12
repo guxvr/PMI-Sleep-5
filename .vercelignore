@@ -1,0 +1,14 @@
+.git
+**/.env
+**/.env.*
+**/node_modules
+frontend/dist
+frontend/test-results
+frontend/playwright-report
+frontend/tests
+tests
+tmp
+docs
+output
+/*_normalizado.csv
+consultar_red_flags.py

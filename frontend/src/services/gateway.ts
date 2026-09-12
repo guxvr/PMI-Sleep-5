@@ -10,6 +10,53 @@ import { assess, MODALITIES, recommend, RATING_LABELS } from "../domain/risk";
 import { currency } from "../domain/format";
 export const dataset = raw as unknown as Dataset;
 export const clients = dataset.clients;
+export type AgentStatus = {
+  configured: boolean;
+  missing: string[];
+  lastSuccess: string | null;
+  lastError: string | null;
+  message: string;
+};
+export async function getAgentStatus(): Promise<AgentStatus> {
+  const response = await fetch("/api/watsonx/status", {
+    signal: AbortSignal.timeout(5000),
+  });
+  if (!response.ok) throw new Error("Backend indisponível.");
+  return response.json();
+}
+export async function chatWithWatsonx(
+  client: Client,
+  operation: Operation,
+  text: string,
+  history: ChatMessage[],
+): Promise<ChatMessage> {
+  const response = await fetch("/api/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    signal: AbortSignal.timeout(130000),
+    body: JSON.stringify({
+      client: { cnpj: client.cnpj },
+      operation,
+      text,
+      threadId: [...history]
+        .reverse()
+        .find((m) => m.provider === "watsonx" && m.threadId)?.threadId,
+    }),
+  });
+  let data;
+  try {
+    data = await response.json();
+  } catch {
+    throw new Error(
+      "O backend não retornou uma resposta válida. Verifique se a API está rodando.",
+    );
+  }
+  if (!response.ok)
+    throw new Error(data.error || "Falha ao consultar o watsonx.");
+  if (data.provider !== "watsonx" || typeof data.text !== "string")
+    throw new Error("Resposta do agente incompatível.");
+  return data as ChatMessage;
+}
 const pause = (ms = 550) => new Promise((resolve) => setTimeout(resolve, ms));
 /** Replace with a server adapter. IBM credentials must never be exposed to Vite. */
 export interface RiskGateway {
