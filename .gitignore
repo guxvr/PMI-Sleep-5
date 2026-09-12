@@ -1,0 +1,4 @@
+# Local inspection and generated browser QA
+tmp/
+__pycache__/
+.DS_Store
