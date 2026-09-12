@@ -2,6 +2,10 @@
 
 Workspace de demonstração do projeto PMI Sleep 5: avaliar **cliente + operação**, explicar evidências e orientar modalidade, prazo e garantia com revisão humana.
 
+**Demonstração pública:** [krilltech-pmi-sleep5.vercel.app](https://krilltech-pmi-sleep5.vercel.app) · [Conversar com o agente watsonx](https://krilltech-pmi-sleep5.vercel.app/agente).
+
+Publicado na Vercel no projeto `bappoz-hackathon/krilltech-pmi-sleep5`. A publicação atual foi feita pelo CLI; a conexão automática da conta Vercel com este repositório GitHub ainda precisa ser autorizada. Um push no GitHub, sozinho, não republica o site atualmente.
+
 ## Executar o frontend
 
 Requer Node.js 22.12+ e npm. Python 3 é necessário apenas para regenerar os dados e executar o teste de paridade com o agente.

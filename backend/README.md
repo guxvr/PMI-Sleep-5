@@ -30,9 +30,11 @@ A consulta real do CNPJ fictício `33444555000103`, modalidade prazo, executou `
 
 ## Publicação na Vercel
 
+URL pública: https://krilltech-pmi-sleep5.vercel.app. Projeto: `bappoz-hackathon/krilltech-pmi-sleep5`. A configuração IBM foi cadastrada em Production; a chave é uma variável sensível. O deploy foi feito pelo CLI, sem conexão automática ao GitHub. Para republicar uma atualização, execute na raiz `vercel deploy --prod --scope bappoz-hackathon` com acesso ao projeto.
+
 O diretório raiz do projeto na Vercel deve ser a raiz deste repositório, e não `frontend`. `vercel.json` instala e compila o frontend e publica `api/chat.mjs` e `api/watsonx/status.mjs` como funções Node.js, com limite de 180 segundos por execução. As rotas do React funcionam ao abrir links diretamente.
 
-Configure as seis variáveis de `backend/.env.example` que começam com `WATSONX_` no ambiente **Production** do projeto. Marque `WATSONX_API_KEY` como **Sensitive**. Elas são lidas exclusivamente pelo servidor; nenhum segredo usa prefixo `VITE_`. O arquivo `.env` local não é enviado à Vercel nem versionado no Git. Após configurar ou alterar variáveis, faça um novo deploy.
+Configure as cinco variáveis de `backend/.env.example` que começam com `WATSONX_` no ambiente **Production** do projeto. Marque `WATSONX_API_KEY` como **Sensitive**. Elas são lidas exclusivamente pelo servidor; nenhum segredo usa prefixo `VITE_`. O arquivo `.env` local não é enviado à Vercel nem versionado no Git. Após configurar ou alterar variáveis, faça um novo deploy.
 
 As requisições do navegador usam `/api` no próprio domínio publicado. Os hosts automáticos da Vercel são reconhecidos pelas variáveis de sistema; para um domínio adicional, configure `APP_HOSTS` com a lista de hosts separados por vírgula, sem protocolo. Não há CORS aberto para outras origens.
 
