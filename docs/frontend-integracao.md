@@ -1,10 +1,12 @@
 # Integração do workspace de risco
 
-Versão 0.2 · 12/09/2026. Contrato **proposto para alinhamento** entre frontend, backend e agentes. Nenhum endpoint abaixo foi implementado nesta entrega.
+Versão 0.3 · 12/09/2026. Contrato **proposto para alinhamento** entre frontend, backend e agentes. A ponte local de chat já está implementada em `backend/server.mjs` (`GET /api/watsonx/status` e `POST /api/chat`). Os endpoints `/api/v1/*` abaixo continuam propostos.
 
 ## Limite entre a demonstração e o sistema
 
-Hoje, React consome um JSON preparado dos CSVs e cenários sintéticos. `RiskGateway.analyze` e `RiskGateway.chat` retornam Promises locais; não há requisição IBM. O frontend calcula indicadores demonstrativos, interpreta políticas de exemplo e salva análises e pareceres no navegador.
+Hoje, React consome um JSON preparado dos CSVs e cenários sintéticos. `RiskGateway.analyze` e o chat de demonstração continuam locais. O modo watsonx usa `chatWithWatsonx`, que chama a ponte local e o agente live com ambiente e versão explícitos. A autenticação IAM fica no servidor e o histórico remoto usa o `thread_id` retornado pela IBM. O frontend calcula indicadores demonstrativos, interpreta políticas de exemplo e salva análises e pareceres no navegador; esses indicadores não são alterados pela conversa remota.
+
+Conexão confirmada em 12/09/2026 com o agente `agente-sintetizador-risco`, live v2, atualizado às 12:13 GMT-3. A versão do deploy IBM é independente da versão v4 do arquivo Python. Configuração e limites estão em [backend/README.md](../backend/README.md).
 
 Na integração, o servidor passa a ser a autoridade para fatos, score, recomendações, autorização e auditoria. O cliente envia a intenção de operação, renderiza o resultado recebido e permite revisão. Não aceitar score, rating ou identidade de analista informados pelo navegador como verdade.
 

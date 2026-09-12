@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import {
   ActionIcon,
   Alert,
@@ -26,7 +28,13 @@ import {
   PageHeading,
   RatingBadge,
 } from "../components/common";
-import { clients, gateway } from "../services/gateway";
+import {
+  clients,
+  gateway,
+  getAgentStatus,
+  chatWithWatsonx,
+  type AgentStatus,
+} from "../services/gateway";
 import { useStore } from "../services/store-context";
 import {
   assess,
@@ -56,6 +64,30 @@ export function Chat() {
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [mode, setMode] = useState<"mock" | "watsonx">(() => {
+    try {
+      return localStorage.getItem("krill-chat-provider") === "mock"
+        ? "mock"
+        : "watsonx";
+    } catch {
+      return "watsonx";
+    }
+  });
+  const [agentStatus, setAgentStatus] = useState<AgentStatus | null>(null);
+  const [statusError, setStatusError] = useState("");
+  async function refreshStatus() {
+    try {
+      setAgentStatus(await getAgentStatus());
+      setStatusError("");
+    } catch {
+      setStatusError(
+        "Backend indisponível. Inicie a API para conversar com o watsonx.",
+      );
+    }
+  }
+  useEffect(() => {
+    void refreshStatus();
+  }, []);
   const [evidence, setEvidence] = useState<string | null>(null);
   const bottom = useRef<HTMLDivElement>(null);
   const policyParam = params.get("politica");
@@ -76,13 +108,22 @@ export function Chat() {
     term: Number(term),
   };
   const a = assess(c, op);
-  const key = `${clientId}:${modality}:${amount}:${term}:${op.policy}:${op.guarantee}:${op.linkedArea}`;
+  const contextKey = `${clientId}:${modality}:${amount}:${term}:${op.policy}:${op.guarantee}:${op.linkedArea}`;
+  const key = mode === "watsonx" ? `watsonx:${contextKey}` : contextKey;
   const messages = store.data.chats[key] || [];
   useEffect(() => {
     bottom.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [messages.length, busy]);
   async function send(prompt = input) {
     if (!prompt.trim() || busy) return;
+    if (mode === "watsonx" && (!agentStatus?.configured || statusError)) {
+      setError(
+        statusError ||
+          agentStatus?.message ||
+          "Aguarde a verificação da configuração do agente.",
+      );
+      return;
+    }
     if (
       !Number.isFinite(op.amount) ||
       op.amount <= 0 ||
@@ -104,11 +145,18 @@ export function Chat() {
     setInput("");
     setBusy(true);
     try {
-      const response = await gateway.chat(c, op, prompt);
+      const response =
+        mode === "watsonx"
+          ? await chatWithWatsonx(c, op, prompt, messages)
+          : await gateway.chat(c, op, prompt);
       store.setChat(key, [...current, response]);
-    } catch {
+      if (mode === "watsonx") void refreshStatus();
+    } catch (err) {
+      setInput(prompt);
       setError(
-        "A resposta simulada falhou. Sua pergunta foi preservada; envie novamente.",
+        err instanceof Error
+          ? err.message
+          : "Não foi possível obter a resposta. Sua pergunta foi preservada.",
       );
     } finally {
       setBusy(false);
@@ -131,12 +179,66 @@ export function Chat() {
           </Button>
         }
       />
+      <Alert
+        color={
+          mode === "watsonx"
+            ? statusError || !agentStatus?.configured
+              ? "yellow"
+              : "teal"
+            : "gray"
+        }
+        mb="md"
+        title={
+          mode === "watsonx"
+            ? "Conversa com o agente publicado no watsonx"
+            : "Conversa de demonstração local"
+        }
+      >
+        {mode === "watsonx"
+          ? statusError ||
+            (agentStatus?.lastSuccess
+              ? `Última resposta recebida do agente: ${new Date(agentStatus.lastSuccess).toLocaleString("pt-BR")}.`
+              : agentStatus?.message || "Verificando configuração…")
+          : "As respostas deste modo são simuladas e não consultam a IBM."}{" "}
+        O score lateral e o dashboard continuam sendo simulações locais; o
+        parecer remoto aparece na conversa.
+        <Button
+          size="compact-xs"
+          variant="subtle"
+          onClick={refreshStatus}
+          disabled={busy}
+        >
+          Atualizar conexão
+        </Button>
+      </Alert>
       <div className="chat-layout">
         <aside className="chat-context">
           <div className="chat-context-heading">
             <span>CONTEXTO DA OPERAÇÃO</span>
             <ShieldCheck size={16} />
           </div>
+          <Select
+            label="Origem da resposta"
+            value={mode}
+            disabled={busy}
+            allowDeselect={false}
+            onChange={(value) => {
+              setMode(value === "mock" ? "mock" : "watsonx");
+              try {
+                localStorage.setItem(
+                  "krill-chat-provider",
+                  value === "mock" ? "mock" : "watsonx",
+                );
+              } catch {
+                /* Private browsing can disable storage. */
+              }
+              setError("");
+            }}
+            data={[
+              { value: "watsonx", label: "watsonx · agente publicado" },
+              { value: "mock", label: "Demonstração local" },
+            ]}
+          />
           <Select
             label="Cliente"
             searchable
@@ -228,10 +330,14 @@ export function Chat() {
             </div>
             <div>
               <b>Assistente Krilltech</b>
-              <span>Respostas simuladas · integração com agente pendente</span>
+              <span>
+                {mode === "watsonx"
+                  ? "Agente publicado · via backend"
+                  : "Respostas simuladas · modo local"}
+              </span>
             </div>
             <Badge color="teal" variant="light" size="xs">
-              MOCK LOCAL
+              {mode === "watsonx" ? "WATSONX" : "MOCK LOCAL"}
             </Badge>
           </header>
           <div className="chat-messages">
@@ -267,7 +373,32 @@ export function Chat() {
                   </div>
                 )}
                 <div>
-                  <div className="message-bubble">{m.text}</div>
+                  <div
+                    className={`message-bubble ${m.provider === "watsonx" ? "agent-markdown" : ""}`}
+                  >
+                    {m.provider === "watsonx" ? (
+                      <Markdown
+                        remarkPlugins={[remarkGfm]}
+                        skipHtml
+                        components={{
+                          img: () => null,
+                          a: ({ href, children }) => (
+                            <a
+                              href={href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {children}
+                            </a>
+                          ),
+                        }}
+                      >
+                        {m.text}
+                      </Markdown>
+                    ) : (
+                      m.text
+                    )}
+                  </div>
                   {m.evidenceIds && m.evidenceIds.length > 0 && (
                     <div className="message-citations">
                       {m.evidenceIds.map((id) => (
@@ -284,7 +415,12 @@ export function Chat() {
                     </div>
                   )}
                   <small className="message-date">
-                    {m.role === "assistant" ? "Resposta simulada" : "Você"} ·{" "}
+                    {m.role === "assistant"
+                      ? m.provider === "watsonx"
+                        ? "watsonx · agente publicado"
+                        : "Resposta simulada"
+                      : "Você"}{" "}
+                    ·{" "}
                     {new Date(m.date).toLocaleTimeString("pt-BR", {
                       hour: "2-digit",
                       minute: "2-digit",
@@ -296,7 +432,10 @@ export function Chat() {
             ))}
             {busy && (
               <div className="typing" role="status">
-                <Sparkles size={17} /> Preparando resposta simulada
+                <Sparkles size={17} />{" "}
+                {mode === "watsonx"
+                  ? "Consultando o agente no watsonx"
+                  : "Preparando resposta simulada"}
                 <span>•••</span>
               </div>
             )}
@@ -340,8 +479,10 @@ export function Chat() {
             </Tooltip>
           </div>
           <div className="chat-disclaimer">
-            Enter para enviar · Shift + Enter para nova linha · Nenhum dado
-            enviado a serviços externos
+            Enter para enviar · Shift + Enter para nova linha ·{" "}
+            {mode === "watsonx"
+              ? "Mensagem, histórico e contexto da operação enviados à IBM"
+              : "Nenhum dado enviado a serviços externos"}
           </div>
         </section>
       </div>

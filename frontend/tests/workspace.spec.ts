@@ -1,10 +1,20 @@
 import { test, expect } from "@playwright/test";
 
+// Existing mock journeys must never consume a teammate's live IBM deployment.
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() =>
+    localStorage.setItem("krill-chat-provider", "mock"),
+  );
+  await page.route("**/api/chat", (route) => route.abort());
+});
+
 test("agent v4 mode uses current Python snapshots in report and chat", async ({
   page,
 }) => {
   await page.goto("/governanca");
-  await page.getByRole("combobox", { name: "Política de demonstração" }).click();
+  await page
+    .getByRole("combobox", { name: "Política de demonstração" })
+    .click();
   await page
     .getByRole("option", { name: "Agente v4 · snapshot Python" })
     .click();
