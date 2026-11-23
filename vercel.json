@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm --prefix frontend ci",
+  "buildCommand": "npm --prefix frontend run build",
+  "outputDirectory": "frontend/dist",
+  "functions": {
+    "api/**/*.mjs": {
+      "maxDuration": 180,
+      "excludeFiles": "{backend/.env*,tmp/**,docs/**,output/**}"
+    }
+  },
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/api/(.*)", "status": 404 },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

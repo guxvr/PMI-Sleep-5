@@ -3155,3 +3155,52 @@ main {
     margin: 12mm;
   }
 }
+.message > div {
+  min-width: 0;
+}
+.agent-markdown {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  overflow-x: auto;
+}
+.agent-markdown p {
+  margin: 0 0 12px;
+}
+.agent-markdown p:last-child {
+  margin-bottom: 0;
+}
+.agent-markdown h1,
+.agent-markdown h2,
+.agent-markdown h3 {
+  font-size: 16px;
+  margin: 18px 0 10px;
+}
+.agent-markdown ul,
+.agent-markdown ol {
+  padding-left: 22px;
+  margin: 10px 0;
+}
+.agent-markdown li {
+  margin: 6px 0;
+}
+.agent-markdown table {
+  border-collapse: collapse;
+  font-size: 12px;
+  margin: 14px 0;
+}
+.agent-markdown th,
+.agent-markdown td {
+  border: 1px solid #dce7df;
+  padding: 8px;
+  text-align: left;
+}
+.agent-markdown th {
+  background: #eef5ef;
+}
+.agent-markdown a {
+  color: #217548;
+  text-decoration: underline;
+}
+.agent-markdown pre {
+  overflow-x: auto;
+}

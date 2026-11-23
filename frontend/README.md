@@ -8,6 +8,7 @@ Veja o [README do projeto](../README.md) para executar e o [contrato de integra�
 | --- | --- |
 | `npm ci` | Instala as versões do lockfile |
 | `npm run dev` | Desenvolvimento com atualização automática |
+| `npm run dev:api` | Ponte local para o agente watsonx; executar em segundo terminal |
 | `npm run build` | TypeScript e build de produção |
 | `npm run preview` | Inspeção local do build |
 | `npm run lint` | Análise estática com Oxlint |
@@ -34,6 +35,6 @@ Há rótulos nos campos, links e botões com nomes acessíveis, atalho Ctrl/Cmd+
 
 ## Escolhas de implementação
 
-Mantine fornece os componentes e os adaptadores de gráficos baseados em Recharts. O tema visual está em `src/main.tsx` e `src/index.css`. As rotas usam carregamento sob demanda. Dados são locais e o navegador não envia mensagens para IBM ou outras APIs. Links de evidência abrem o registro original do mock, com arquivo e linha; nomes das fontes não indicam conexão oficial ativa.
+Mantine fornece os componentes e os adaptadores de gráficos baseados em Recharts. O tema visual está em `src/main.tsx` e `src/index.css`. As rotas usam carregamento sob demanda. A conversa watsonx envia mensagem e contexto ao backend local, que chama a IBM. A chave e o token IAM nunca vão ao navegador. Links de evidência abrem o registro original do mock, com arquivo e linha; nomes das fontes não indicam conexão oficial ativa.
 
-`src/services/gateway.ts` é a primeira fronteira a substituir na integração, mas a carteira, fontes e regras locais também deverão migrar para dados de servidor. Não basta trocar somente a função de chat para afirmar que o produto está integrado.
+`src/services/gateway.ts` já integra o chat com `POST /api/chat`. Conversas reais e simuladas têm históricos separados; respostas reais são exibidas em Markdown sem HTML e sem carregar imagens externas. Carteira, fontes, regras locais e revisão ainda deverão migrar para dados de servidor. Veja [a configuração da API](../backend/README.md).
